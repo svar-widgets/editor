@@ -1,0 +1,36 @@
+<script>
+	let { key, label, active, onclick } = $props();
+</script>
+
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<div
+	class="wx-section"
+	class:wx-section-active={active}
+	onclick={() =>
+		onclick &&
+		onclick({ item: { id: "toggle-section", key: active ? null : key } })}
+>
+	<h3>{label}</h3>
+	<i class={`wxi-angle-${active ? "down" : "right"} wx-icon`}></i>
+</div>
+
+<style>
+	.wx-section {
+		position: relative;
+		border-bottom: 1px solid #ccc;
+		cursor: pointer;
+		padding: 6px;
+	}
+	.wx-section-active {
+		background-color: #f0f0f0;
+		padding-bottom: 0px;
+		margin-bottom: 10px;
+	}
+	.wx-section .wx-icon {
+		position: absolute;
+		right: 10px;
+		top: 20px;
+		font-size: 25px;
+	}
+</style>

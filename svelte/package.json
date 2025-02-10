@@ -1,0 +1,51 @@
+{
+	"name": "wx-svelte-editor",
+	"version": "2.0.1",
+	"description": "null",
+	"productTag": "editor",
+	"productTrial": false,
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"build:dist": "vite build --mode dist",
+		"build:tests": "vite build --mode test",
+		"lint": "yarn eslint ./demos ./src",
+		"start": "vite --open",
+		"start:tests": "vite --open=/tests/ --host 0.0.0.0  --port 5100 --mode test",
+		"test": "true",
+		"test:cypress": "cypress run -P ./ --config \"baseUrl=http://localhost:5100/tests\""
+	},
+	"svelte": "src/index.js",
+	"exports": {
+		".": {
+			"svelte": "./src/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/svar-widgets/editor.git"
+	},
+	"bugs": {
+		"url": "https://forum.svar.dev"
+	},
+	"homepage": "https://svar.dev/svelte/editor/",
+	"dependencies": {
+		"wx-editor-locales": "2.0.1",
+		"wx-lib-dom": "0.7.1",
+		"wx-lib-state": "1.9.0",
+		"wx-lib-svelte": "0.5.1",
+		"wx-svelte-comments": "^2.0.1",
+		"wx-svelte-core": "2.0.1",
+		"wx-svelte-tasklist": "^2.0.1",
+		"wx-svelte-toolbar": "2.0.1"
+	},
+	"files": [
+		"src",
+		"readme.md",
+		"whatsnew.md",
+		"license.txt"
+	],
+	"keywords": null
+}
