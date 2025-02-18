@@ -1,7 +1,20 @@
 <script>
 	import { getData } from "../data";
-	import { Editor } from "../../src";
-	import { Switch } from "wx-svelte-core";
+	import { Editor, registerEditorItem } from "../../src";
+	import {
+		Switch,
+		Combo,
+		ColorPicker,
+		DatePicker,
+		Slider,
+		MultiCombo,
+	} from "wx-svelte-core";
+
+	registerEditorItem("combo", Combo);
+	registerEditorItem("color", ColorPicker);
+	registerEditorItem("date", DatePicker);
+	registerEditorItem("slider", Slider);
+	registerEditorItem("multiselect", MultiCombo);
 
 	let { listItems, listData } = $state(getData());
 

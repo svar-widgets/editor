@@ -9,9 +9,14 @@ import WillowDark from "./themes/WillowDark.svelte";
 import ReadOnly from "./components/sections/ReadOnly.svelte";
 import Section from "./components/sections/Section.svelte";
 import { Text } from "wx-svelte-core";
+import { TextArea } from "wx-svelte-core";
+import { Checkbox } from "wx-svelte-core";
+
+registerEditorItem("text", Text);
+registerEditorItem("textarea", TextArea);
+registerEditorItem("checkbox", Checkbox);
 
 registerEditorItem("readonly", ReadOnly);
-registerEditorItem("text", Text);
 registerEditorItem("section", Section);
 
 import { setEnv } from "wx-lib-dom";

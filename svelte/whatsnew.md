@@ -1,13 +1,39 @@
-### 1.0.0
+## 2.1.0
 
-Initial version released
+### New features
 
-### 0.6.0
+-   TextArea and Checkbox as built-in types
 
--   [add] validation
+### Fixes
 
-### 0.5.0
+-   values are not changed until recreated
 
--   [add] ability to define collapsible sections
--   [add] ability to bind values to toolbar controls
--   [update] `section:left|right` changed to `column:left|right`
+## 2.0.1
+
+-   Public release
+
+### New features
+
+-   Svelte 5 support
+-   Comments and TaskList sections
+
+## 0.6.0
+
+### New features
+
+-   Validation
+
+## 0.5.0
+
+### New features
+
+-   Ability to define collapsible sections
+-   Ability to bind values to toolbar controls
+
+### Updates
+
+-   `section:left|right` changed to `column:left|right`
+
+## 0.2.0
+
+-   Initial version

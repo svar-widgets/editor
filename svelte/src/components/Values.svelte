@@ -1,6 +1,6 @@
 <script>
 	// svelte core
-	import { getContext } from "svelte";
+	import { getContext, untrack } from "svelte";
 	const _ = getContext("wx-i18n").getGroup("editor");
 
 	import { itemsToEditors } from "../editor";
@@ -84,8 +84,16 @@
 		return editors;
 	});
 
-	let actualValues = $state(deepCopy(values));
-	let data = $state(deepCopy(values));
+	let actualValues = $state({});
+	let data = $state({});
+
+	$effect(() => {
+		values;
+		untrack(() => {
+			actualValues = deepCopy(values);
+			data = deepCopy(values);
+		});
+	});
 
 	let d = dataLink(() => values && null);
 

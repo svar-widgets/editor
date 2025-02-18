@@ -10,7 +10,7 @@
 	const _ = getContext("wx-i18n");
 	const format = dateToString("%M %d %Y", _.getRaw().calendar);
 
-	let { listItems, listData, users } = getData();
+	let { listItems, listData, users } = $state(getData());
 
 	const demoItems = [
 		listItems[0],

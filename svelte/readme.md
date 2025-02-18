@@ -14,7 +14,15 @@
 
 </div>
 
-A Svelte UI component for rendering editable list of tasks
+An intuitive Svelte component for creating content editing forms to manage data within UI elements on a page. You can use it for editing structured data like table rows, informational cards, blocks with text, etc. 
+
+### Key features:
+
+- **Flexible display options**: open the editor in a modal popup or as a seamless sidebar for convenient access.
+- **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Svelte Core](https://svar.dev/svelte/core/) library.
+- **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
+- **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
+- **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
 
 ### How to Use
 

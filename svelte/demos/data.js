@@ -4,21 +4,13 @@ export function getData() {
 
 	const items = [
 		{ comp: "text", key: "name", label: "Name", column: "left" },
+		{ comp: "checkbox", key: "admin", label: "Is Admin" },
+		{ comp: "text", key: "email", label: "Email" },
 		{
 			comp: "textarea",
 			key: "descr",
 			label: "Description",
 			column: "left",
-		},
-		{ comp: "checkbox", key: "admin", label: "Is Admin" },
-		{
-			comp: "select",
-			key: "role",
-			label: "Role",
-			options: [
-				{ id: "admin", label: "Admin" },
-				{ id: "user", label: "User" },
-			],
 		},
 	];
 
@@ -36,20 +28,22 @@ export function getData() {
 			label: "Description",
 		},
 		{
+			comp: "text",
+			key: "email",
+			batch: "main",
+			label: "Email",
+		},
+		{
 			comp: "checkbox",
 			key: "admin",
-			batch: "main",
+			batch: "cfg",
 			label: "Is Admin",
 		},
 		{
 			key: "theme",
 			batch: "cfg",
-			comp: "combo",
-			label: "Theme",
-			options: [
-				{ id: "light", label: "Light" },
-				{ id: "dark", label: "Dark" },
-			],
+			comp: "checkbox",
+			label: "Dark theme",
 		},
 	];
 
@@ -57,7 +51,8 @@ export function getData() {
 		name: "John Doe",
 		descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
 		admin: true,
-		role: "admin",
+		email: "john.doe@example.org",
+		theme: false,
 		comments: [],
 		tasks: [],
 	};
@@ -66,18 +61,22 @@ export function getData() {
 		{
 			id: 1,
 			name: "Sarah Smith",
+			label: "Sarah Smith",
 		},
 		{
 			id: 2,
 			name: "Diego Redmoor",
+			label: "Diego Redmoor",
 		},
 		{
 			id: 3,
 			name: "Alex Johnson",
+			label: "Alex Johnson",
 		},
 		{
 			id: 4,
 			name: "Marta Kowalski",
+			label: "Marta Kowalski",
 		},
 	];
 
@@ -455,6 +454,12 @@ export function onlySectionItems(sec = {}) {
 			label: "Description",
 			section: "personal-section",
 		},
+		{
+			comp: "text",
+			key: "email",
+			label: "Email",
+			section: "personal-section",
+		},
 
 		// the data below is used instead of the commented lines below
 		{
@@ -463,23 +468,10 @@ export function onlySectionItems(sec = {}) {
 			label: "Role",
 		},
 		{
-			comp: "select",
-			key: "role",
-			options: [
-				{ id: "admin", name: "Admin" },
-				{ id: "user", name: "User" },
-			],
-			section: "role-section",
-		},
-		{
-			comp: "section",
-			key: "admin-section",
-			label: "Is admin",
-		},
-		{
 			comp: "checkbox",
 			key: "admin",
-			section: "admin-section",
+			label: "Is admin",
+			section: "role-section",
 		},
 		{
 			comp: "section",

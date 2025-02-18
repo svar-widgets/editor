@@ -3,15 +3,15 @@
 	import { Form, registerEditorItem } from "../../src";
 
 	import { Comments } from "wx-svelte-comments";
-	registerEditorItem("comments", Comments);
-
 	import { Tasklist } from "wx-svelte-tasklist";
+
+	registerEditorItem("comments", Comments);
 	registerEditorItem("tasks", Tasklist);
 
 	const { values } = getData();
 
 	const items1 = sectionItems();
-	const items2 = sectionItems({});
+	const items2 = sectionItems({ sectionMode: "exclusive" });
 	const items3 = onlySectionItems();
 	const items4 = onlySectionItems({ sectionMode: "accordion" });
 </script>

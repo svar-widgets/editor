@@ -1,5 +1,8 @@
 <script>
-	import { Form } from "../../src";
+	import { Form, registerEditorItem } from "../../src";
+	import { Combo } from "wx-svelte-core";
+
+	registerEditorItem("combo", Combo);
 
 	let items = $state([
 		{

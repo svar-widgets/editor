@@ -5,6 +5,7 @@
 
 	import { Tasklist } from "wx-svelte-tasklist";
 	import { Comments } from "wx-svelte-comments";
+
 	registerEditorItem("tasks", Tasklist);
 	registerEditorItem("comments", Comments);
 
@@ -15,7 +16,7 @@
 		"https://master--svar-tasklist-go--dev.webix.io/tasks"
 	);
 
-	const { listData, users } = getData();
+	const { listData, users } = $state(getData());
 	let message = $state("");
 	function handleClick({ item }) {
 		message = "click: " + item.id;
@@ -29,16 +30,7 @@
 		layout: "columns",
 		autoSave: true,
 		items: [
-			{ comp: "text", key: "name", label: "Name", column: "left" },
-			{
-				comp: "select",
-				key: "role",
-				label: "Role",
-				options: [
-					{ id: "admin", label: "Admin" },
-					{ id: "user", label: "User" },
-				],
-			},
+			{ comp: "text", key: "label", label: "Name", column: "left" },
 			{
 				comp: "tasks",
 				key: "id",

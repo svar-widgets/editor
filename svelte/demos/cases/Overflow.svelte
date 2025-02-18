@@ -28,17 +28,7 @@
 		layout: "columns",
 		autoSave: false,
 		items: [
-			{ comp: "text", key: "name", label: "Name", column: "left" },
-			{
-				comp: "select",
-				key: "role",
-				label: "Role",
-				options: [
-					{ id: "admin", label: "Admin" },
-					{ id: "user", label: "User" },
-				],
-			},
-			{ comp: "text", key: "name2", label: "Name" },
+			{ comp: "text", key: "label", label: "Name", column: "left" },
 			{ comp: "tasks", key: "task", label: "Tasks" },
 			{
 				comp: "comments",
@@ -60,16 +50,7 @@
 		placement: "sidebar",
 		autoSave: true,
 		items: [
-			{ comp: "text", key: "name", label: "Name" },
-			{
-				comp: "select",
-				key: "role",
-				label: "Role",
-				options: [
-					{ id: "admin", label: "Admin" },
-					{ id: "user", label: "User" },
-				],
-			},
+			{ comp: "text", key: "label", label: "Name" },
 			{ comp: "tasks", key: "task", label: "Tasks" },
 			{
 				comp: "comments",
@@ -90,16 +71,7 @@
 		placement: "modal",
 		autoSave: true,
 		items: [
-			{ comp: "text", key: "name", label: "Name" },
-			{
-				comp: "select",
-				key: "role",
-				label: "Role",
-				options: [
-					{ id: "admin", label: "Admin" },
-					{ id: "user", label: "User" },
-				],
-			},
+			{ comp: "text", key: "label", label: "Name" },
 			{ comp: "tasks", key: "task", label: "Tasks" },
 			{
 				comp: "comments",

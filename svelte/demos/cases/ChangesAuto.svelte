@@ -3,6 +3,21 @@
 	import { getData } from "../data";
 	import { Editor } from "/src";
 
+	import { registerEditorItem } from "/src";
+	import {
+		Combo,
+		ColorPicker,
+		DatePicker,
+		Slider,
+		MultiCombo,
+	} from "wx-svelte-core";
+
+	registerEditorItem("combo", Combo);
+	registerEditorItem("color", ColorPicker);
+	registerEditorItem("date", DatePicker);
+	registerEditorItem("slider", Slider);
+	registerEditorItem("multiselect", MultiCombo);
+
 	import { dateToString } from "wx-lib-dom";
 	const _ = getContext("wx-i18n");
 	const format = dateToString("%M %d %Y", _.getRaw().calendar);
