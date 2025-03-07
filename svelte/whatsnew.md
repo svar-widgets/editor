@@ -1,3 +1,11 @@
+## 2.1.1
+
+### Fixes
+
+-   Section bars have light styling in WillowDark skin
+-   Section bars are not clickable for inline Editor
+-   Content overflow for inline Editor
+
 ## 2.1.0
 
 ### New features

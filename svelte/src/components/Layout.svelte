@@ -31,11 +31,12 @@
 
 	const _ = getContext("wx-i18n").getGroup("editor");
 
+	let autoBars = $derived(topBar === true && bottomBar === true);
 	let tbar = $derived.by(() => {
 		let bar =
 			topBar && topBar.items ? topBar.items.map(b => ({ ...b })) : [];
 
-		if (topBar === true && bottomBar === true) {
+		if (autoBars) {
 			if (!readonly) {
 				if (autoSave) bar = [Spacer(), CloseIcon()];
 				else if (placement !== "modal")
@@ -57,7 +58,7 @@
 				? bottomBar.items.map(b => ({ ...b }))
 				: [];
 
-		if (topBar === true && bottomBar === true) {
+		if (autoBars) {
 			if (!readonly) {
 				if (placement === "modal" && !autoSave)
 					bar = [Spacer(), SaveButton(_), CancelButton(_)];
@@ -181,6 +182,11 @@
 	.wx-content {
 		height: 100%;
 		overflow-y: auto;
+	}
+
+	.wx-inline-form,
+	.wx-inline-form .wx-content {
+		overflow: visible;
 	}
 
 	.wx-content.wx-layout-columns {

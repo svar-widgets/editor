@@ -1,6 +1,6 @@
 <script>
 	import { Locale, Segmented, Button } from "wx-svelte-core";
-	import { Editor, Form } from "../../src/index";
+	import { Editor } from "../../src/index";
 
 	import { de, cn, en } from "wx-editor-locales";
 	import { de as deCore, cn as cnCore, en as enCore } from "wx-core-locales";
@@ -74,7 +74,7 @@
 <div style="margin: auto; max-width: 700px; margin-top: 40px;">
 	{#key lang}
 		<Locale words={getWords(lang)}>
-			<Form {items} {values} />
+			<Editor {items} {values} topBar={false} />
 			{#if visible}
 				<Editor
 					placement={"sidebar"}

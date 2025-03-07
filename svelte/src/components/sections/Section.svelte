@@ -23,7 +23,7 @@
 		padding: 6px;
 	}
 	.wx-section-active {
-		background-color: #f0f0f0;
+		background-color: var(--wx-background-alt);
 		padding-bottom: 0px;
 		margin-bottom: 10px;
 	}

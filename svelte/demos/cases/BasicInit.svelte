@@ -1,6 +1,6 @@
 <script>
 	import { getData } from "../data";
-	import { Form } from "../../src";
+	import { Editor } from "../../src";
 
 	const { items, values } = getData();
 </script>
@@ -9,13 +9,13 @@
 	<div>
 		<h3>Normal</h3>
 		<div class="bg">
-			<Form {items} {values} />
+			<Editor {items} {values} topBar={false} />
 		</div>
 	</div>
 	<div>
 		<h3>Readonly</h3>
 		<div class="bg">
-			<Form {items} {values} readonly={true} />
+			<Editor {items} {values} readonly={true} topBar={false} />
 		</div>
 	</div>
 </div>

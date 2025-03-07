@@ -87,7 +87,7 @@
 	let actualValues = $state({});
 	let data = $state({});
 
-	$effect(() => {
+	$effect.pre(() => {
 		values;
 		untrack(() => {
 			actualValues = deepCopy(values);
@@ -123,9 +123,9 @@
 	function handleUpdate(changes) {
 		if (autoSave) {
 			if (!d.errors) {
+				editors.setValues(values, data, changes);
 				onsave &&
 					onsave({ changes, values: actualValues, errors: d.errors });
-				editors.setValues(values, data, changes);
 			}
 		} else {
 			notSaved = changes;

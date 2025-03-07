@@ -60,7 +60,7 @@
 </script>
 
 <div style="padding: 10px;">
-	<h3>Form with required fields</h3>
+	<h3>Editor with required fields</h3>
 	<div class="bg">
 		<Editor
 			{items}

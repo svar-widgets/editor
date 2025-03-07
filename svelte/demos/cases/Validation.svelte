@@ -1,14 +1,14 @@
 <script>
-	import { Form } from "../../src";
+	import { Editor } from "../../src";
 	import { getData } from "../data";
 
 	let { itemsValidation: items, valuesValidation: values } = getData();
 </script>
 
 <div style="padding: 10px;">
-	<h3>Form with validation and error messages</h3>
+	<h3>Editor with validation and error messages</h3>
 	<div class="bg">
-		<Form {items} {values} autoApply={false} />
+		<Editor {items} {values} autoApply={false} topBar={false} />
 	</div>
 </div>
 

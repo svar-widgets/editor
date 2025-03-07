@@ -1,6 +1,6 @@
 <script>
 	import { getData } from "../data";
-	import { Form, Editor } from "../../src";
+	import { Editor } from "../../src";
 	import { Segmented, Tabs } from "wx-svelte-core";
 
 	import { registerToolbarItem, Toolbar } from "wx-svelte-toolbar";
@@ -27,43 +27,27 @@
 	<div>
 		<h3>Segmented</h3>
 		<div class="bg">
-			<Form topBar={[]} items={batchItems} {values} {activeBatch}>
-				<div class="top">
+			<Editor topBar={[]} items={batchItems} {values} {activeBatch}>
+				<div class="top" style="margin-left: 20px;">
 					<Segmented {options} bind:value={activeBatch}></Segmented>
 				</div>
-			</Form>
+			</Editor>
 		</div>
 	</div>
 	<div>
 		<h3>Tabbar</h3>
 		<div class="bg">
-			<Form topBar={[]} items={batchItems} {values} {activeBatch}>
+			<Editor topBar={[]} items={batchItems} {values} {activeBatch}>
 				<div class="top">
 					<Tabs {options} bind:value={activeBatch}></Tabs>
 				</div>
-			</Form>
+			</Editor>
 		</div>
 	</div>
 	<div>
 		<h3>Toolbar</h3>
 		<div class="bg">
-			<Editor
-				items={batchItems}
-				{values}
-				{activeBatch}
-				bottomBar={{
-					items: [
-						{ comp: "spacer" },
-						{ comp: "button", text: "Cancel", id: "cancel" },
-						{
-							comp: "button",
-							type: "primary",
-							text: "Save",
-							id: "save",
-						},
-					],
-				}}
-			>
+			<Editor items={batchItems} {values} {activeBatch} , topBar={[]}>
 				<Toolbar
 					values={toolbarValues}
 					items={[

@@ -1,5 +1,5 @@
 <script>
-	import { Form, registerEditorItem } from "../../src";
+	import { Editor, registerEditorItem } from "../../src";
 	import { Combo } from "wx-svelte-core";
 
 	registerEditorItem("combo", Combo);
@@ -56,37 +56,40 @@
 		city: "",
 	});
 
-	function handleUpdate(ev) {
-		const { key, value, update } = ev;
+	function handleChange(ev) {
+		const { key, value: v } = ev;
 
 		if (key === "country") {
 			items[1] = {
 				...items[1],
 				disabled: false,
-				options: cities[value],
+				options: cities[v],
 			};
 
-			update.city = "";
+			values = {
+				country: v,
+				city: "",
+			};
 		}
 	}
 </script>
 
 <div style="padding: 10px;">
 	<h3>Changing the country updates list of options in the cities combo</h3>
-	<div class="form">
-		<Form {items} {values} onchange={handleUpdate} />
+	<div class="editor">
+		<Editor {items} {values} onchange={handleChange} topBar={false} />
 	</div>
 </div>
 
 <style>
-	.form {
+	.editor {
 		border-top: 1px solid #ccc;
 		padding: 10px;
 		height: 600px;
 		width: 600px;
 	}
 
-	.form :global(.sections) {
+	.editor :global(.sections) {
 		height: 100%;
 	}
 </style>

@@ -1,6 +1,6 @@
 <script>
 	import { getData } from "../data";
-	import { Editor, Form, registerEditorItem } from "/src";
+	import { Editor, registerEditorItem } from "/src";
 	import { Button } from "wx-svelte-core";
 
 	import { Tasklist } from "wx-svelte-tasklist";
@@ -154,9 +154,9 @@
 	</div>
 </div>
 
-<h4 style="margin: 20px">Form example</h4>
-<div class="form">
-	<Form items={config1.items} values={listData[0]} />
+<h4 style="margin: 20px">Inline Editor example</h4>
+<div class="editor">
+	<Editor items={config1.items} values={listData[0]} topBar={false} />
 </div>
 
 {#if visible}
@@ -182,9 +182,10 @@
 		flex-direction: column;
 	}
 
-	.form {
+	.editor {
 		margin: 40px;
-		height: 600px;
-		width: 400px;
+		height: 400px;
+		width: 600px;
+		overflow: scroll;
 	}
 </style>

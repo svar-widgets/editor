@@ -157,7 +157,7 @@ export function getData() {
 					cardId: 1,
 					content:
 						"Greetings, fellow colleagues. I would like to share my insights on this task. I reckon we should deal with at least half of the points in the plan without further delays.",
-					date: new Date(),
+					date: new Date(2025, 2, 1, 10, 35),
 				},
 				{
 					id: 2,
@@ -165,7 +165,7 @@ export function getData() {
 					cardId: 1,
 					content:
 						"Hi, Diego. I am sure that that's exactly what is thought best out there in Dunwall. Let's just do what we are supposed to do to get the result.",
-					date: new Date(),
+					date: new Date(2025, 2, 1, 10, 57),
 				},
 				{
 					id: 5,
@@ -173,7 +173,7 @@ export function getData() {
 					cardId: 1,
 					content:
 						"Absolutely, Diego. Action speaks louder than words, and in this case, it's about executing the plan efficiently. Let's prioritize tasks and tackle them head-on.",
-					date: new Date(),
+					date: new Date(2025, 2, 1, 11, 13),
 				},
 				{
 					id: 6,
@@ -181,7 +181,7 @@ export function getData() {
 					cardId: 1,
 					content:
 						"I couldn't agree more, Sarah. Time is of the essence, and we can't afford to waste any more of it. Let's dive into the plan and start ticking off those points one by one.",
-					date: new Date(),
+					date: new Date(2025, 2, 2, 7, 2),
 				},
 			],
 			task: [
@@ -275,21 +275,21 @@ export function getData() {
 					user: 4,
 					cardId: 3,
 					content: "Nice seven",
-					date: new Date(),
+					date: new Date(2025, 2, 5, 8, 24),
 				},
 				{
 					id: 8,
 					user: 3,
 					cardId: 3,
 					content: "Nice eight",
-					date: new Date(),
+					date: new Date(2025, 2, 5, 9, 14),
 				},
 				{
 					id: 9,
 					user: 1,
 					cardId: 3,
 					content: "Nice nine",
-					date: new Date(),
+					date: new Date(2025, 2, 5, 11, 12),
 				},
 			],
 			task: [
