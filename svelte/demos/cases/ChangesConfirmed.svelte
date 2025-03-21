@@ -1,5 +1,4 @@
 <script>
-	import { getContext } from "svelte";
 	import { getData } from "../data";
 	import { Editor } from "/src";
 
@@ -17,10 +16,6 @@
 	registerEditorItem("date", DatePicker);
 	registerEditorItem("slider", Slider);
 	registerEditorItem("multiselect", MultiCombo);
-
-	import { dateToString } from "wx-lib-dom";
-	const _ = getContext("wx-i18n");
-	const format = dateToString("%M %d %Y", _.getRaw().calendar);
 
 	const { listItems, listData } = $state(getData());
 
@@ -53,7 +48,7 @@
 		>
 			<h4>{data.label}</h4>
 			<p>{data.description || ""}</p>
-			<sub>starts on: {format(data.start_date)}</sub>
+			<sub>starts on: {data.start_date?.toLocaleDateString() || ""}</sub>
 		</div>
 	{/each}
 </div>

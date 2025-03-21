@@ -7,9 +7,7 @@
 	import { dataLink } from "./Helpers.svelte.js";
 
 	// core widgets lib
-	import { Locale } from "wx-svelte-core";
 	import { deepCopy, isSame } from "wx-lib-state";
-	import en from "../en.js";
 
 	// incoming parameters
 	let {
@@ -23,7 +21,7 @@
 		bottomBar = true,
 		layout = "default",
 		placement = "inline",
-		view,
+		view: View,
 		children,
 		onchange,
 		onsave,
@@ -171,25 +169,22 @@
 	}
 </script>
 
-<Locale words={en} optional={true}>
-	<!-- svelte-ignore a11y_click_events_have_key_events -->
-	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	{@const SvelteComponent = view}
-	<SvelteComponent
-		{topBar}
-		{bottomBar}
-		{placement}
-		{layout}
-		{readonly}
-		{autoSave}
-		{css}
-		{data}
-		{editors}
-		{focus}
-		errors={d.errors}
-		onclick={handleAction}
-		onchange={handleChanges}
-	>
-		{#if children}{@render children()}{/if}
-	</SvelteComponent>
-</Locale>
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<View
+	{topBar}
+	{bottomBar}
+	{placement}
+	{layout}
+	{readonly}
+	{autoSave}
+	{css}
+	{data}
+	{editors}
+	{focus}
+	errors={d.errors}
+	onclick={handleAction}
+	onchange={handleChanges}
+>
+	{#if children}{@render children()}{/if}
+</View>

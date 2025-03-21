@@ -1,14 +1,9 @@
 <script>
-	import { getContext } from "svelte";
 	import { getData } from "../data";
 	import { Editor, registerEditorItem } from "../../src";
 
 	import { Comments } from "wx-svelte-comments";
 	registerEditorItem("comments", Comments);
-
-	import { dateToString } from "wx-lib-dom";
-	const _ = getContext("wx-i18n");
-	const format = dateToString("%M %d %Y", _.getRaw().calendar);
 
 	let { listItems, listData, users } = $state(getData());
 
@@ -58,7 +53,7 @@
 		>
 			<h4>{data.label}</h4>
 			<p>{data.description || ""}</p>
-			<sub>starts on: {format(data.start_date)}</sub>
+			<sub>starts on: {data.start_date.toLocaleDateString()}</sub>
 		</div>
 	{/each}
 </div>

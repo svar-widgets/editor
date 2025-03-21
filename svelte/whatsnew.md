@@ -1,3 +1,9 @@
+## 2.1.2
+
+### Fixes
+
+-   Editor en-US locale is not applied by default
+
 ## 2.1.1
 
 ### Fixes

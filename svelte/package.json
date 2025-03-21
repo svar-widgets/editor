@@ -1,6 +1,6 @@
 {
 	"name": "wx-svelte-editor",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"description": "Svelte component for creating forms to edit structured data on a page (info cards, text blocks, table rows, etc",
 	"keywords": [
 		"svelte",
@@ -40,14 +40,14 @@
 	},
 	"homepage": "https://svar.dev/svelte/editor/",
 	"dependencies": {
-		"wx-editor-locales": "2.1.1",
+		"wx-editor-locales": "2.1.2",
 		"wx-lib-dom": "0.8.0",
 		"wx-lib-state": "1.9.0",
 		"wx-lib-svelte": "0.5.1",
-		"wx-svelte-comments": "2.1.0",
-		"wx-svelte-core": "2.1.0",
-		"wx-svelte-tasklist": "2.1.0",
-		"wx-svelte-toolbar": "2.1.0"
+		"wx-svelte-comments": "2.1.1",
+		"wx-svelte-core": "2.1.1",
+		"wx-svelte-tasklist": "2.1.1",
+		"wx-svelte-toolbar": "2.1.1"
 	},
 	"files": [
 		"src",

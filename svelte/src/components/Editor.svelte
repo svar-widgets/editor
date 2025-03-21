@@ -1,4 +1,7 @@
 <script>
+	import { Locale } from "wx-svelte-core";
+	import en from "../en.js";
+
 	import Layout from "./Layout.svelte";
 	import Values from "./Values.svelte";
 
@@ -21,21 +24,23 @@
 	} = $props();
 </script>
 
-<Values
-	view={Layout}
-	{values}
-	{items}
-	{css}
-	{activeBatch}
-	{topBar}
-	{bottomBar}
-	{focus}
-	{autoSave}
-	{autoApply}
-	{layout}
-	{readonly}
-	{placement}
-	{...restProps}
->
-	{#if children}{@render children()}{/if}
-</Values>
+<Locale words={en} optional={true}>
+	<Values
+		view={Layout}
+		{values}
+		{items}
+		{css}
+		{activeBatch}
+		{topBar}
+		{bottomBar}
+		{focus}
+		{autoSave}
+		{autoApply}
+		{layout}
+		{readonly}
+		{placement}
+		{...restProps}
+	>
+		{#if children}{@render children()}{/if}
+	</Values>
+</Locale>

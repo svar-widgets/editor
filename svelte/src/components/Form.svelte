@@ -1,6 +1,9 @@
 <script>
 	import { onMount } from "svelte";
 
+	import { Locale } from "wx-svelte-core";
+	import en from "../en.js";
+
 	import Editor from "./FormEditor.svelte";
 	import Values from "./Values.svelte";
 
@@ -37,21 +40,23 @@
 	});
 </script>
 
-<div class="wx-content" bind:this={root}>
-	<Values
-		view={Editor}
-		{values}
-		{items}
-		{css}
-		{activeBatch}
-		{autoSave}
-		{autoApply}
-		{readonly}
-		{...restProps}
-	>
-		{#if children}{@render children()}{/if}
-	</Values>
-</div>
+<Locale words={en} optional={true}>
+	<div class="wx-content" bind:this={root}>
+		<Values
+			view={Editor}
+			{values}
+			{items}
+			{css}
+			{activeBatch}
+			{autoSave}
+			{autoApply}
+			{readonly}
+			{...restProps}
+		>
+			{#if children}{@render children()}{/if}
+		</Values>
+	</div>
+</Locale>
 
 <style>
 	.wx-content {
