@@ -16,17 +16,23 @@
 
 An intuitive Svelte component for creating content editing forms to manage data within UI elements on a page. You can use it for editing structured data like table rows, informational cards, blocks with text, etc. 
 
-### Key features:
+<div align="center">
+	
+<img src="https://svar.dev/images/github/github-editor.png" alt="SVAR Core - Svelte UI Library" style="width: 600px;">
 
-- **Flexible display options**: open the editor in a modal popup or as a seamless sidebar for convenient access.
+</div>
+
+### :sparkles: Key features:
+
+- **Flexible display options**: add the editor as a modal popup, inline form or as a seamless sidebar for convenient access.
 - **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Core](https://github.com/svar-widgets/core) library.
 - **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
 - **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
 - **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
 
-### How to Use
+### :hammer_and_wrench: How to Use
 
-To use the widget, simply import the package and include the component in your Svelte file:
+To use the Editor widget, simply import the package and include the component in your Svelte file:
 
 ```svelte
 <script>
@@ -37,15 +43,16 @@ To use the widget, simply import the package and include the component in your S
 
 <Editor {value} />
 ```
+For more details, visit the [getting started guide](https://docs.svar.dev/svelte/editor/getting_started/).
 
-### How to Modify
+### :wrench: How to Modify
 
 Typically, you don't need to modify the code. However, if you wish to do so, follow these steps:
 
 1. Run `yarn` to install dependencies. Note that this project is a monorepo using `yarn` workspaces, so npm will not work
 2. Start the project in development mode with `yarn start`
 
-### Run Tests
+### :white_check_mark: Run Tests
 
 To run the test:
 
