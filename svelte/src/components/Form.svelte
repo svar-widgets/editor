@@ -1,6 +1,4 @@
 <script>
-	import { onMount } from "svelte";
-
 	import { Locale } from "wx-svelte-core";
 	import en from "../en.js";
 
@@ -20,33 +18,16 @@
 		children,
 		...restProps
 	} = $props();
-
-	let root = $state();
-	onMount(() => {
-		if (focus) {
-			// if the focus is already inside the root, don't do anything
-			const focused = document.activeElement;
-			if (focused && root.contains(focused)) return;
-
-			// get the first input, textarea or select element and focus it
-			const input = root.querySelector("input, textarea, select");
-			if (input) {
-				setTimeout(() => {
-					input.select();
-					input.focus();
-				}, 300);
-			}
-		}
-	});
 </script>
 
 <Locale words={en} optional={true}>
-	<div class="wx-content" bind:this={root}>
+	<div class="wx-content">
 		<Values
 			view={Editor}
 			{values}
 			{items}
 			{css}
+			{focus}
 			{activeBatch}
 			{autoSave}
 			{autoApply}

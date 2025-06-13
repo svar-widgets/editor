@@ -1,7 +1,7 @@
 <script>
 	import Editor from "./FormEditor.svelte";
 
-	let { editors, data, layout, errors, onclick, onchange } = $props();
+	let { editors, data, layout, errors, focus, onclick, onchange } = $props();
 
 	let columns = $derived.by(() => {
 		let cols = [];

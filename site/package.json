@@ -1,6 +1,6 @@
 {
 	"name": "wx-site-svelte-editor",
-	"version": "2.1.2",
+	"version": "2.1.3",
 	"type": "module",
 	"scripts": {
 		"build": "vite build",
@@ -9,7 +9,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"wx-svelte-editor": "2.1.2",
+		"wx-svelte-editor": "2.1.3",
 		"wx-svelte-core": "2.0.1"
 	}
 }

@@ -1,3 +1,9 @@
+## 2.1.3
+
+### Fixes
+
+-   Impossible to set focus for topmost Editor field
+
 ## 2.1.2
 
 ### Fixes

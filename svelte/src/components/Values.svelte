@@ -16,6 +16,7 @@
 		css,
 		activeBatch,
 		autoSave,
+		focus,
 		readonly,
 		topBar = true,
 		bottomBar = true,

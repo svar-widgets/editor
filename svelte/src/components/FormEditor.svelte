@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from "svelte";
 	import { Field } from "wx-svelte-core";
 
 	import { getItemHandler } from "../helpers";
@@ -8,13 +9,34 @@
 		data,
 		css = "",
 		errors,
+		focus = false,
 		onclick,
 		children,
 		onchange,
 	} = $props();
+
+	let root = $state();
+	onMount(() => {
+		if (focus) {
+			// if the focus is already inside the root, don't do anything
+			const focused = document.activeElement;
+			if (focused && root.contains(focused)) return;
+
+			// get the first input, textarea or select element and focus it
+			const input = root.querySelector(
+				"input:not([disabled]), textarea:not([disabled]), select:not([disabled])"
+			);
+			if (input) {
+				setTimeout(() => {
+					input.select();
+					input.focus();
+				}, 300);
+			}
+		}
+	});
 </script>
 
-<div class="wx-sections {css}">
+<div class="wx-sections {css}" bind:this={root}>
 	{#if children}{@render children()}{/if}
 	{#each editors.config as editor}
 		{#if !editor.hidden}
