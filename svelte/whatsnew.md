@@ -1,3 +1,25 @@
+## 2.2.0
+
+### New features
+
+-   Overlay for readonly mode in case of empty fields
+-   Hotkeys for common actions
+
+### Updates
+
+-   Events in `autoSave` modes are enhanced:
+    -   true: `onsave` event is triggered for each field change
+    -   false: `onsave` event is triggered on "Save" button click if data was changed
+-   Validation is enhanced:
+    -   it is triggered for each changed field if `autoSave` is switched on
+    -   it is triggered for the whole form if `autoSave` is switched off
+    -   `onsave` event is triggered only if all data is valid
+-   Ability to mutate Editor values within the `onchange` event handler
+
+### Breaking changes
+
+-   `autoApply` event was removed
+
 ## 2.1.3
 
 ### Fixes

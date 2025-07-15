@@ -23,6 +23,6 @@
 	});
 </script>
 
-{#if text}
+{#if text || text === 0}
 	<Field {label}>{text}</Field>
 {/if}

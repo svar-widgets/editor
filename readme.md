@@ -14,7 +14,7 @@
 
 </div>
 
-An intuitive Svelte component for creating content editing forms to manage data within UI elements on a page. You can use it for editing structured data like table rows, informational cards, blocks with text, etc. 
+An intuitive Svelte component for creating content editing forms to manage data within UI elements on a page. You can use it for editing structured data like table rows, informational cards, blocks with text, etc.
 
 <div align="center">
 	
@@ -24,11 +24,11 @@ An intuitive Svelte component for creating content editing forms to manage data 
 
 ### :sparkles: Key features:
 
-- **Flexible display options**: add the editor as a modal popup, inline form or as a seamless sidebar for convenient access.
-- **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Core](https://github.com/svar-widgets/core) library.
-- **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
-- **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
-- **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
+-   **Flexible display options**: add the editor as a modal popup, inline form or as a seamless sidebar for convenient access.
+-   **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Core](https://github.com/svar-widgets/core) library.
+-   **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
+-   **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
+-   **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
 
 ### :hammer_and_wrench: How to Use
 
@@ -43,6 +43,7 @@ To use the Editor widget, simply import the package and include the component in
 
 <Editor {value} />
 ```
+
 For more details, visit the [getting started guide](https://docs.svar.dev/svelte/editor/getting_started/).
 
 ### :wrench: How to Modify

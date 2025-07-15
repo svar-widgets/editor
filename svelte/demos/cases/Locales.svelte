@@ -11,7 +11,6 @@
 			key: "firstName",
 			label: "First name",
 			required: true,
-			//validation:v => v
 		},
 		{
 			comp: "text",
@@ -21,6 +20,7 @@
 		},
 		{ comp: "checkbox", key: "admin", label: "Is Admin" },
 		{ comp: "checkbox", key: "guest", label: "Is Guest" },
+		{ comp: "textarea", key: "description", label: "Description" },
 	];
 
 	const values = {

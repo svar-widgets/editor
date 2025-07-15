@@ -6,5 +6,6 @@ export default {
 		No: "Nein",
 		Save: "Speichern",
 		Cancel: "Abbrechen",
+		"No data": "Keine Daten",
 	},
 };

@@ -9,7 +9,7 @@
 		onchange: onchangeform,
 	} = $props();
 	const onchange = ({ item, value }) => {
-		onchangeform && onchangeform({ item, key: item.key, value });
+		onchangeform && onchangeform({ key: item.key, value });
 	};
 </script>
 

@@ -66,7 +66,7 @@
 				options: cities[v],
 			};
 
-			values = {
+			ev.update = {
 				country: v,
 				city: "",
 			};

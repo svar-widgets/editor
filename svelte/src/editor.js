@@ -79,24 +79,28 @@ export function itemsToEditors(sections) {
 		return changes;
 	};
 
-	const validateValues = (values, _) => {
+	const validateValues = (values, changes, _) => {
 		let any = 0;
 		const errors = {};
 
-		config.forEach(ed => {
+		const fields = changes?.length
+			? changes.map(key => config.find(a => a.key === key))
+			: config;
+
+		fields.forEach(ed => {
 			if (ed.required && !values[ed.key]) {
 				errors[ed.key] = {
 					errorType: "required",
 				};
 				ed.validationMessage =
-					ed.validationMessage || _("This field is required");
+					ed.validationMessage ?? _("This field is required");
 				any++;
 			} else if (ed.validation && !ed.validation(values[ed.key])) {
 				errors[ed.key] = {
 					errorType: "validation",
 				};
 				ed.validationMessage =
-					ed.validationMessage || _("Invalid value");
+					ed.validationMessage ?? _("Invalid value");
 				any++;
 			}
 		});

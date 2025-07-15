@@ -6,5 +6,6 @@ export default {
 		No: "不",
 		Save: "节省",
 		Cancel: "取消",
+		"No data": "没有数据",
 	},
 };

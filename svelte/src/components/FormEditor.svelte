@@ -1,5 +1,5 @@
 <script>
-	import { onMount } from "svelte";
+	import { onMount, getContext } from "svelte";
 	import { Field } from "wx-svelte-core";
 
 	import { getItemHandler } from "../helpers";
@@ -34,10 +34,22 @@
 			}
 		}
 	});
+
+	const _ = getContext("wx-i18n").getGroup("editor");
+
+	let overlay = $derived(
+		editors.config[0].comp === "readonly" &&
+			editors.config.every(
+				editor => !Object.keys(data).includes(editor.key)
+			)
+	);
 </script>
 
 <div class="wx-sections {css}" bind:this={root}>
 	{#if children}{@render children()}{/if}
+	{#if overlay}
+		<div class="wx-overlay">{_("No data")}</div>
+	{/if}
 	{#each editors.config as editor}
 		{#if !editor.hidden}
 			{#if editor.comp === "readonly" || editor.comp === "section"}
@@ -59,13 +71,15 @@
 						{#snippet children({ id })}
 							{@const Component2 = getItemHandler(editor.comp)}
 							<Component2
-								onchange={ev =>
-									onchange &&
-									onchange({
-										value: ev.value,
-										key: editor.key,
-									})}
 								{...editor}
+								onchange={ev => {
+									onchange &&
+										onchange({
+											value: ev.value,
+											key: editor.key,
+											input: ev.input,
+										});
+								}}
 								{id}
 								label={undefined}
 								error={errors && errors[editor.key]}
@@ -74,7 +88,7 @@
 						{/snippet}
 					</Field>
 					{#if errors && errors[editor.key] && editor.validationMessage}
-						<div class="message">{editor.validationMessage}</div>
+						<div class="wx-message">{editor.validationMessage}</div>
 					{/if}
 				</div>
 			{/if}
@@ -88,11 +102,14 @@
 		--wx-field-width: 600px;
 		margin: 12px 20px 0;
 	}
-	.message {
+	.wx-message {
 		margin-top: calc(var(--wx-field-gutter) * -1);
 		font-size: 12px;
 		line-height: var(--wx-field-gutter);
 		color: var(--wx-color-danger);
 		width: inherit;
+	}
+	.wx-overlay {
+		font-weight: 600;
 	}
 </style>

@@ -8,7 +8,7 @@
 <div style="padding: 10px;">
 	<h3>Editor with validation and error messages</h3>
 	<div class="bg">
-		<Editor {items} {values} autoApply={false} topBar={false} />
+		<Editor {items} {values} topBar={false} />
 	</div>
 </div>
 

@@ -69,6 +69,7 @@
 
 		editors.config.forEach(x => {
 			x.hidden =
+				x.hidden ||
 				(activeBatch && activeBatch !== x.batch) ||
 				(exclusive && x.key != exclusive && x.section !== exclusive) ||
 				(x.section && !sections.has(x.section));
@@ -96,43 +97,68 @@
 
 	let d = dataLink(() => values && null);
 
-	let notSaved = [];
+	let notSaved = $state([]);
 	// reset notSaved when values are changed
 	$effect(() => values && (notSaved = []));
 
-	function handleChanges({ value, key }) {
+	function handleChanges({ value, key, input }) {
 		data[key] = value;
-		onchange &&
-			onchange({
-				key,
-				value,
-				update: data,
-			});
+		const event = {
+			key,
+			value,
+			update: data,
+		};
+		if (input) event.input = input;
+		onchange && onchange(event);
+
+		if (!values) return;
+
+		data = event.update;
 
 		const changes = editors.diff(values, data);
 
-		actualValues = editors.setValues({ ...actualValues }, data, [key]);
-		d.errors = runValidation(actualValues);
-		if (changes.length) handleUpdate(changes, data);
+		actualValues = editors.setValues(
+			{ ...actualValues },
+			data,
+			getUniqueFields([...changes, key])
+		);
+
+		if (changes.length) {
+			const fieldsToValidate = autoSave
+				? []
+				: getUniqueFields([
+						...changes,
+						...Object.keys(d.errors ?? {}),
+						key,
+					]);
+			d.errors = runValidation(fieldsToValidate);
+			handleUpdate(changes);
+		} else {
+			const errorsFields = Object.keys(d.errors ?? {});
+			// if there are errors, we have to support validation of the fields that have errors
+			if (errorsFields.length) d.errors = runValidation(errorsFields);
+			notSaved = [];
+		}
 	}
 
 	// when data is changed we send the "change" event outside
-	// if autoSave is on we save the changes and send the "save" event
-	// if autoSave is off we keep the changes in `notSaved` array
+	// if autoSave is on and values are validated we save the changes and send the "save" event
+	// otherwise we keep the changes in `notSaved` array
 	function handleUpdate(changes) {
-		if (autoSave) {
-			if (!d.errors) {
-				editors.setValues(values, data, changes);
-				onsave &&
-					onsave({ changes, values: actualValues, errors: d.errors });
-			}
+		if (autoSave && !d.errors) {
+			editors.setValues(values, data, changes);
+			onsave && onsave({ changes, values: actualValues });
 		} else {
 			notSaved = changes;
 		}
 	}
 
-	function runValidation() {
-		const check = editors.validateValues(actualValues, _);
+	function getUniqueFields(arr) {
+		return [...new Set(arr)];
+	}
+
+	function runValidation(changes) {
+		const check = editors.validateValues(actualValues, changes, _);
 
 		if (!isSame(check, d.errors)) {
 			onvalidation &&
@@ -153,12 +179,12 @@
 
 	function saveAction() {
 		if (!notSaved.length) return;
+		if (!autoSave) d.errors = runValidation();
 		if (!d.errors) {
 			onsave &&
 				onsave({
 					changes: notSaved,
 					values: actualValues,
-					errors: d.errors,
 				});
 			editors.setValues(values, data, notSaved);
 			notSaved = [];
@@ -185,6 +211,7 @@
 	{focus}
 	errors={d.errors}
 	onclick={handleAction}
+	onkeydown={handleAction}
 	onchange={handleChanges}
 >
 	{#if children}{@render children()}{/if}
