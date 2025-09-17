@@ -1,5 +1,5 @@
 <script>
-	import { Field, Combo } from "wx-svelte-core";
+	import { Field, Combo } from "@svar-ui/svelte-core";
 
 	let { value = $bindable() } = $props();
 

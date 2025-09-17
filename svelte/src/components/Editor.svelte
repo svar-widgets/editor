@@ -1,5 +1,5 @@
 <script>
-	import { Locale } from "wx-svelte-core";
+	import { Locale } from "@svar-ui/svelte-core";
 	import en from "../en.js";
 
 	import Layout from "./Layout.svelte";

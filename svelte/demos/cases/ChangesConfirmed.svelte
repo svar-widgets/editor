@@ -9,7 +9,7 @@
 		DatePicker,
 		Slider,
 		MultiCombo,
-	} from "wx-svelte-core";
+	} from "@svar-ui/svelte-core";
 
 	registerEditorItem("combo", Combo);
 	registerEditorItem("color", ColorPicker);

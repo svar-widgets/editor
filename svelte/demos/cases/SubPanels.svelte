@@ -2,8 +2,8 @@
 	import { getData, sectionItems, onlySectionItems } from "../data";
 	import { Editor, registerEditorItem } from "../../src";
 
-	import { Comments } from "wx-svelte-comments";
-	import { Tasklist } from "wx-svelte-tasklist";
+	import { Comments } from "@svar-ui/svelte-comments";
+	import { Tasklist } from "@svar-ui/svelte-tasklist";
 
 	registerEditorItem("comments", Comments);
 	registerEditorItem("tasks", Tasklist);

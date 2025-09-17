@@ -1,6 +1,6 @@
 <script>
 	import { Editor, registerEditorItem } from "../../src";
-	import { Combo } from "wx-svelte-core";
+	import { Combo } from "@svar-ui/svelte-core";
 
 	registerEditorItem("combo", Combo);
 

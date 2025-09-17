@@ -1,5 +1,5 @@
 {
-	"name": "wx-editor-locales",
+	"name": "@svar-ui/editor-locales",
 	"version": "2.2.0",
 	"description": "Locales for WX Editor widget",
 	"type": "module",

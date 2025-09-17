@@ -2,7 +2,7 @@
 	import { getData } from "../data";
 	import { Editor, registerEditorItem } from "../../src";
 
-	import { Comments } from "wx-svelte-comments";
+	import { Comments } from "@svar-ui/svelte-comments";
 	registerEditorItem("comments", Comments);
 
 	let { listItems, listData, users } = $state(getData());

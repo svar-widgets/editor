@@ -1,4 +1,4 @@
-import { uid, isSame } from "wx-lib-state";
+import { uid, isSame } from "@svar-ui/lib-state";
 
 function rawGetter(key) {
 	if (typeof key === "string" && key.includes(".")) {

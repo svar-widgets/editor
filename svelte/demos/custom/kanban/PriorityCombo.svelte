@@ -1,5 +1,5 @@
 <script>
-	import { Combo } from "wx-svelte-core";
+	import { Combo } from "@svar-ui/svelte-core";
 	import UserIcon from "./UserIcon.svelte";
 
 	let { value, options, onchange, ...restProps } = $props();

@@ -1,5 +1,5 @@
 <script>
-	import { MultiCombo } from "wx-svelte-core";
+	import { MultiCombo } from "@svar-ui/svelte-core";
 
 	import UserIcon from "./UserIcon.svelte";
 

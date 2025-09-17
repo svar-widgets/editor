@@ -1,9 +1,9 @@
 <script>
-	import { Locale, Segmented, Button } from "wx-svelte-core";
+	import { Locale, Segmented, Button } from "@svar-ui/svelte-core";
 	import { Editor } from "../../src/index";
 
-	import { de, cn, en } from "wx-editor-locales";
-	import { de as deCore, cn as cnCore, en as enCore } from "wx-core-locales";
+	import { de, cn, en } from "@svar-ui/editor-locales";
+	import { de as deCore, cn as cnCore, en as enCore } from "@svar-ui/core-locales";
 
 	const items = [
 		{

@@ -1,7 +1,7 @@
 <script>
 	import { Editor, registerEditorItem } from "../../src";
 
-	import { ColorSelect } from "wx-svelte-core";
+	import { ColorSelect } from "@svar-ui/svelte-core";
 
 	import UserMultiselect from "../custom/kanban/UserMultiselect.svelte";
 	import PriorityCombo from "../custom/kanban/PriorityCombo.svelte";

@@ -7,7 +7,7 @@
 	import { dataLink } from "./Helpers.svelte.js";
 
 	// core widgets lib
-	import { deepCopy, isSame } from "wx-lib-state";
+	import { deepCopy, isSame } from "@svar-ui/lib-state";
 
 	// incoming parameters
 	let {

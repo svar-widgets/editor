@@ -1,6 +1,6 @@
 <script>
 	import { onMount, getContext } from "svelte";
-	import { Field } from "wx-svelte-core";
+	import { Field } from "@svar-ui/svelte-core";
 
 	import { getItemHandler } from "../helpers";
 

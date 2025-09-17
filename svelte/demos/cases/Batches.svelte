@@ -1,9 +1,9 @@
 <script>
 	import { getData } from "../data";
 	import { Editor } from "../../src";
-	import { Segmented, Tabs } from "wx-svelte-core";
+	import { Segmented, Tabs } from "@svar-ui/svelte-core";
 
-	import { registerToolbarItem, Toolbar } from "wx-svelte-toolbar";
+	import { registerToolbarItem, Toolbar } from "@svar-ui/svelte-toolbar";
 	registerToolbarItem("segmented", Segmented);
 
 	const { batchItems, values } = getData();

@@ -8,9 +8,9 @@ import WillowDark from "./themes/WillowDark.svelte";
 
 import ReadOnly from "./components/sections/ReadOnly.svelte";
 import Section from "./components/sections/Section.svelte";
-import { Text } from "wx-svelte-core";
-import { TextArea } from "wx-svelte-core";
-import { Checkbox } from "wx-svelte-core";
+import { Text } from "@svar-ui/svelte-core";
+import { TextArea } from "@svar-ui/svelte-core";
+import { Checkbox } from "@svar-ui/svelte-core";
 
 registerEditorItem("text", Text);
 registerEditorItem("textarea", TextArea);
@@ -19,8 +19,8 @@ registerEditorItem("checkbox", Checkbox);
 registerEditorItem("readonly", ReadOnly);
 registerEditorItem("section", Section);
 
-import { setEnv } from "wx-lib-dom";
-import { env } from "wx-lib-svelte";
+import { setEnv } from "@svar-ui/lib-dom";
+import { env } from "@svar-ui/lib-svelte";
 setEnv(env);
 
 export { registerEditorItem, Form, Editor, Material, Willow, WillowDark };

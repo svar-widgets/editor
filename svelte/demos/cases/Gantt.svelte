@@ -1,6 +1,6 @@
 <script>
 	import { Editor, registerEditorItem } from "../../src";
-	import { Counter } from "wx-svelte-core";
+	import { Counter } from "@svar-ui/svelte-core";
 
 	import Links from "../custom/gantt/Links.svelte";
 

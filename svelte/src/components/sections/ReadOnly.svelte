@@ -1,6 +1,6 @@
 <script>
 	import { getContext } from "svelte";
-	import { Field } from "wx-svelte-core";
+	import { Field } from "@svar-ui/svelte-core";
 
 	const _ = getContext("wx-i18n").getGroup("editor");
 

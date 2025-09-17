@@ -1,10 +1,10 @@
 <script>
 	import { getData } from "../data";
 	import { Editor, registerEditorItem } from "/src";
-	import { Button } from "wx-svelte-core";
+	import { Button } from "@svar-ui/svelte-core";
 
-	import { Tasklist } from "wx-svelte-tasklist";
-	import { Comments } from "wx-svelte-comments";
+	import { Tasklist } from "@svar-ui/svelte-tasklist";
+	import { Comments } from "@svar-ui/svelte-comments";
 	registerEditorItem("tasks", Tasklist);
 	registerEditorItem("comments", Comments);
 

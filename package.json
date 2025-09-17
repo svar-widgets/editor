@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "wx-editor",
+	"name": "@svar-ui/editor",
 	"workspaces": [
 		"svelte",
 		"locales",
@@ -11,7 +11,7 @@
 		"build:site": "cd site && yarn build",
 		"build:tests": "cd svelte && yarn build:tests",
 		"build": "cd svelte && yarn build",
-		"lint": "yarn eslint ./svelte/src ./svelte/demos ./locales",
+		"lint": "yarn eslint ./svelte/src ./svelte/demos",
 		"prepare": "husky",
 		"start:demos": "cd svelte && yarn start",
 		"start:site": "cd site && yarn start",
@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@sveltejs/vite-plugin-svelte": "4.0.0",
 		"@vitest/coverage-v8": "1.6.0",
-		"wx-vite-tools": "1.0.5",
+		"@svar-ui/vite-tools": "1.0.5",
 		"autoprefixer": "10.4.20",
 		"cypress": "13.6.4",
 		"eslint": "9.14.0",

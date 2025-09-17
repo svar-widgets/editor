@@ -1,7 +1,7 @@
 <script>
 	import { Editor } from "/src";
 	import { getData } from "../data";
-	import { Material, Locale } from "wx-svelte-core";
+	import { Material, Locale } from "@svar-ui/svelte-core";
 
 	const { data } = getData();
 </script>

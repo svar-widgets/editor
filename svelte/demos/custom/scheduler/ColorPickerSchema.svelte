@@ -1,6 +1,6 @@
 <script>
-	import { ColorSelect } from "wx-svelte-core";
-	import { form } from "wx-lib-svelte";
+	import { ColorSelect } from "@svar-ui/svelte-core";
+	import { form } from "@svar-ui/lib-svelte";
 
 	let {
 		colors,

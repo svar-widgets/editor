@@ -1,5 +1,5 @@
 <script>
-	import { ModalArea, SideArea } from "wx-svelte-core";
+	import { ModalArea, SideArea } from "@svar-ui/svelte-core";
 	import Panel from "./Panel.svelte";
 
 	let { css, onclick, placement, ...restProps } = $props();

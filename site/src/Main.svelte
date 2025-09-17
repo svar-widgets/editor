@@ -1,9 +1,9 @@
 <script>
 	import { getContext } from "svelte";
 	import { getData } from "./data";
-	import { Editor, registerEditorItem } from "wx-svelte-editor";
-	import { Comments } from "wx-svelte-comments";
-	import { RichSelect, TextArea, DatePicker, Slider } from "wx-svelte-core";
+	import { Editor, registerEditorItem } from "@svar-ui/svelte-editor";
+	import { Comments } from "@svar-ui/svelte-comments";
+	import { RichSelect, TextArea, DatePicker, Slider } from "@svar-ui/svelte-core";
 
 	let { skin = $bindable() } = $props();
 
@@ -13,7 +13,7 @@
 	registerEditorItem("date", DatePicker);
 	registerEditorItem("slider", Slider);
 
-	import { dateToString } from "wx-lib-dom";
+	import { dateToString } from "@svar-ui/lib-dom";
 	const _ = getContext("wx-i18n");
 	const format = dateToString("%M %d %Y", _.getRaw().calendar);
 

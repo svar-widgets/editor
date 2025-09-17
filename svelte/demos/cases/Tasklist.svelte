@@ -2,7 +2,7 @@
 	import { getData } from "../data";
 	import { Editor, registerEditorItem } from "../../src";
 
-	import { Tasklist } from "wx-svelte-tasklist";
+	import { Tasklist } from "@svar-ui/svelte-tasklist";
 	registerEditorItem("tasks", Tasklist);
 
 	let { listItems, listData } = $state(getData());

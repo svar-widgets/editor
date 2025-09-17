@@ -1,5 +1,5 @@
 <script>
-	import { Toolbar } from "wx-svelte-toolbar";
+	import { Toolbar } from "@svar-ui/svelte-toolbar";
 
 	let {
 		items,

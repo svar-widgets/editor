@@ -1,5 +1,5 @@
 <script>
-	import { Uploader, UploaderList } from "wx-svelte-uploader";
+	import { Uploader, UploaderList } from "@svar-ui/svelte-uploader";
 
 	let { value = [], uploadURL, onchange, ...restProps } = $props();
 

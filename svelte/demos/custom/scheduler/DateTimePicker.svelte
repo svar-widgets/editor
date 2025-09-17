@@ -1,5 +1,5 @@
 <script>
-	import { DatePicker, TimePicker } from "wx-svelte-core";
+	import { DatePicker, TimePicker } from "@svar-ui/svelte-core";
 
 	let { value, id, time, onchange, ...restProps } = $props();
 </script>
