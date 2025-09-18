@@ -15,7 +15,6 @@
 		bottomBar = true,
 		focus = false,
 		autoSave = false,
-		autoApply = false,
 		layout = "default",
 		readonly = false,
 		placement = "inline",
@@ -35,7 +34,6 @@
 		{bottomBar}
 		{focus}
 		{autoSave}
-		{autoApply}
 		{layout}
 		{readonly}
 		{placement}

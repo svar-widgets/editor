@@ -2,9 +2,9 @@
 
 # SVAR Svelte Editor
 
-[![npm](https://img.shields.io/npm/v/wx-svelte-editor.svg)](https://www.npmjs.com/package/wx-svelte-editor)
+[![npm](https://img.shields.io/npm/v/@svar-ui/svelte-editor.svg)](https://www.npmjs.com/package/@svar-ui/svelte-editor)
 [![License](https://img.shields.io/github/license/svar-widgets/editor)](https://github.com/svar-widgets/editor/blob/main/license.txt)
-[![npm downloads](https://img.shields.io/npm/dm/wx-svelte-editor.svg)](https://www.npmjs.com/package/wx-svelte-editor)
+[![npm downloads](https://img.shields.io/npm/dm/@svar-ui/svelte-editor.svg)](https://www.npmjs.com/package/@svar-ui/svelte-editor)
 
 </div>
 
@@ -14,22 +14,22 @@
 
 </div>
 
-**SVAR Svelte Editor** is an intuitive Svelte component for creating content editing forms to manage data within UI elements on a page. You can use it for editing structured data like table rows, informational cards, blocks with text, etc. 
+**SVAR Svelte Editor** is an intuitive Svelte component for creating content editing forms to manage data within UI elements on a page. You can use it for editing structured data like table rows, informational cards, blocks with text, etc.
 
 <div align="center">
 	
-<img src="https://svar.dev/images/github/github-editor.png" alt="SVAR Core - Svelte UI Library" style="width: 600px;">
+<img src="https://svar.dev/images/github/github-editor.png" alt="SVAR Editor - Svelte UI Component" style="width: 600px;">
 
 </div>
 
 ### :sparkles: Key features:
 
-- **Flexible display options**: open the editor in a modal popup or as a seamless sidebar for convenient access.
-- **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Svelte Core](https://svar.dev/svelte/core/) library.
-- **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
-- **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
-- **Comments section**: You can add a nice-looking comments section to give your users the ability to communicate. 
-- **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
+-   **Flexible display options**: open the editor in a modal popup or as a seamless sidebar for convenient access.
+-   **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Svelte Core](https://svar.dev/svelte/core/) library.
+-   **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
+-   **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
+-   **Comments section**: You can add a nice-looking comments section to give your users the ability to communicate.
+-   **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
 
 ### :hammer_and_wrench: How to Use
 
@@ -37,7 +37,7 @@ To use the Editor, simply import the package and include the component in your S
 
 ```svelte
 <script>
-	import { Editor } from "wx-svelte-editor";
+	import { Editor } from "@svar-ui/svelte-editor";
 
 	const value = [];
 </script>

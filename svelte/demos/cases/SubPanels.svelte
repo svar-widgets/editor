@@ -19,7 +19,7 @@
 <div class="variations">
 	<div class="bg-top">
 		<h3>Normal sections</h3>
-		<Editor items={items1} {values} topBar="{false}}" />
+		<Editor items={items1} {values} topBar={false} />
 	</div>
 	<div class="bg-top">
 		<h3>Exclusive mode</h3>

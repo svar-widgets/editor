@@ -18,7 +18,6 @@
 		<div class="bg">
 			<Editor
 				topBar={{
-					css: "separated",
 					items: [
 						{
 							comp: "label",
@@ -30,7 +29,6 @@
 							icon: "wxi-dots-v",
 							collapsed: true,
 							layout: "column",
-							menu: true,
 							items: [
 								{
 									id: "done",

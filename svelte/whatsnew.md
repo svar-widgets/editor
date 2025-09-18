@@ -1,3 +1,14 @@
+## 2.3.0
+
+### New features
+
+-   TypeScript definitions
+
+### Updates
+
+-   Item `activeSection` parameter is added to define initial section state
+-   Item `comp` can point directly to Svelte Component without registering
+
 ## 2.2.0
 
 ### New features

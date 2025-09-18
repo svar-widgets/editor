@@ -27,7 +27,7 @@
 	<div>
 		<h3>Segmented</h3>
 		<div class="bg">
-			<Editor topBar={[]} items={batchItems} {values} {activeBatch}>
+			<Editor topBar={false} items={batchItems} {values} {activeBatch}>
 				<div class="top" style="margin-left: 20px;">
 					<Segmented {options} bind:value={activeBatch}></Segmented>
 				</div>
@@ -37,7 +37,7 @@
 	<div>
 		<h3>Tabbar</h3>
 		<div class="bg">
-			<Editor topBar={[]} items={batchItems} {values} {activeBatch}>
+			<Editor topBar={false} items={batchItems} {values} {activeBatch}>
 				<div class="top">
 					<Tabs {options} bind:value={activeBatch}></Tabs>
 				</div>
@@ -47,7 +47,7 @@
 	<div>
 		<h3>Toolbar</h3>
 		<div class="bg">
-			<Editor items={batchItems} {values} {activeBatch} , topBar={[]}>
+			<Editor items={batchItems} {values} {activeBatch} topBar={false}>
 				<Toolbar
 					values={toolbarValues}
 					items={[

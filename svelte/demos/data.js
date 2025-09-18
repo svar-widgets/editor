@@ -438,7 +438,7 @@ export function onlySectionItems(sec = {}) {
 			comp: "section",
 			key: "personal-section",
 			label: "Personal Info",
-			active: true,
+			activeSection: true,
 		},
 		{
 			comp: "text",

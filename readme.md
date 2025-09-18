@@ -2,9 +2,9 @@
 
 # SVAR Svelte Editor
 
-[![npm](https://img.shields.io/npm/v/wx-svelte-editor.svg)](https://www.npmjs.com/package/wx-svelte-editor)
+[![npm](https://img.shields.io/npm/v/@svar-ui/svelte-editor.svg)](https://www.npmjs.com/package/@svar-ui/svelte-editor)
 [![License](https://img.shields.io/github/license/svar-widgets/editor)](https://github.com/svar-widgets/editor/blob/main/license.txt)
-[![npm downloads](https://img.shields.io/npm/dm/wx-svelte-editor.svg)](https://www.npmjs.com/package/wx-svelte-editor)
+[![npm downloads](https://img.shields.io/npm/dm/@svar-ui/svelte-editor.svg)](https://www.npmjs.com/package/@svar-ui/svelte-editor)
 
 </div>
 
@@ -18,7 +18,7 @@ An intuitive Svelte component for creating content editing forms to manage data 
 
 <div align="center">
 	
-<img src="https://svar.dev/images/github/github-editor.png" alt="SVAR Core - Svelte UI Library" style="width: 600px;">
+<img src="https://svar.dev/images/github/github-editor.png" alt="SVAR Editor - Svelte UI Component" style="width: 600px;">
 
 </div>
 
@@ -36,7 +36,7 @@ To use the Editor widget, simply import the package and include the component in
 
 ```svelte
 <script>
-	import { Editor } from "wx-svelte-editor";
+	import { Editor } from "@svar-ui/svelte-editor";
 
 	const value = [];
 </script>

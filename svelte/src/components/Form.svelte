@@ -13,7 +13,6 @@
 		activeBatch = null,
 		focus = false,
 		autoSave = true,
-		autoApply = true,
 		readonly = false,
 		children,
 		...restProps
@@ -30,7 +29,6 @@
 			{focus}
 			{activeBatch}
 			{autoSave}
-			{autoApply}
 			{readonly}
 			{...restProps}
 		>

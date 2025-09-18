@@ -1,18 +1,20 @@
 <script>
-	let { key, label, active, onclick } = $props();
+	let { key, label, activeSection, onclick } = $props();
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <div
 	class="wx-section"
-	class:wx-section-active={active}
+	class:wx-section-active={activeSection}
 	onclick={() =>
 		onclick &&
-		onclick({ item: { id: "toggle-section", key: active ? null : key } })}
+		onclick({
+			item: { id: "toggle-section", key: activeSection ? null : key },
+		})}
 >
 	<h3>{label}</h3>
-	<i class={`wxi-angle-${active ? "down" : "right"} wx-icon`}></i>
+	<i class={`wxi-angle-${activeSection ? "down" : "right"} wx-icon`}></i>
 </div>
 
 <style>
