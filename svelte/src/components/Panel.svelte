@@ -1,6 +1,6 @@
 <script>
 	import { getContext } from "svelte";
-	import { hotkeys } from "../hotkeys";
+	import { hotkeys as libHotkeys } from "@svar-ui/lib-dom";
 
 	import Columns from "./Columns.svelte";
 	import Toolbar from "./buttons/Toolbar.svelte";
@@ -28,6 +28,7 @@
 		onclick,
 		onkeydown,
 		onchange,
+		hotkeys,
 	} = $props();
 
 	const _ = getContext("wx-i18n").getGroup("editor");
@@ -70,22 +71,47 @@
 		return bar;
 	});
 
+	const getHotkeyHandler = item => {
+		if (!item) return false;
+		return event => {
+			const target = event.target;
+
+			if (
+				event.key == "Escape" &&
+				(target.closest(".wx-combo") ||
+					target.closest(".wx-multicombo") ||
+					target.closest(".wx-richselect"))
+			)
+				return;
+
+			if (
+				event.key == "Delete" &&
+				(target.tagName === "INPUT" || target.tagName === "TEXTAREA")
+			)
+				return;
+
+			event.preventDefault();
+			onkeydown({ item });
+		};
+	};
+	let node = null;
 	let buttons = $derived([...tbar, ...bbar]);
+
+	$effect(() => {
+		if (hotkeys === false) return;
+		const defaultHotkeys = {
+			"ctrl+s": getHotkeyHandler(buttons.find(t => t.id === "save")),
+			escape: getHotkeyHandler(
+				buttons.find(t => t.id === "cancel" || t.id === "close")
+			),
+			delete: getHotkeyHandler(buttons.find(t => t.id === "delete")),
+		};
+		const config = { ...defaultHotkeys, ...(hotkeys || {}) };
+		$libHotkeys.configure(config, node);
+	});
 </script>
 
-<div
-	class={css}
-	use:hotkeys={{
-		keys: {
-			"ctrl+s": buttons.find(t => t.id === "save"),
-			escape: buttons.find(t => t.id === "cancel" || t.id === "close"),
-			"ctrl+d": buttons.find(t => t.id === "delete"),
-		},
-		action: item => {
-			onkeydown && onkeydown({ item });
-		},
-	}}
->
+<div class={css} bind:this={node} tabindex="-1" style={"outline: none;"}>
 	<Toolbar {...topBar} items={tbar} values={data} {onclick} {onchange} />
 	<div class="wx-content" class:wx-layout-columns={layout === "columns"}>
 		{#if children}{@render children()}{/if}

@@ -1,3 +1,14 @@
+## 2.4.0
+
+### New features
+
+-   Ability to configure custom hotkeys
+
+### Fixes
+
+-   Handling primitive values from Comments and Tasklist
+-   Validation marks are present on resetting values
+
 ## 2.3.0
 
 ### New features

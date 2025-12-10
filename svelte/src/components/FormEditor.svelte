@@ -68,24 +68,21 @@
 							: (editor.label ?? "")}
 						required={editor.required}
 					>
-						{#snippet children({ id })}
-							{@const Component2 = getItemHandler(editor.comp)}
-							<Component2
-								{...editor}
-								onchange={ev => {
-									onchange &&
-										onchange({
-											value: ev.value,
-											key: editor.key,
-											input: ev.input,
-										});
-								}}
-								{id}
-								label={undefined}
-								error={errors && errors[editor.key]}
-								value={data[editor.key]}
-							/>
-						{/snippet}
+						{@const Component2 = getItemHandler(editor.comp)}
+						<Component2
+							onchange={ev => {
+								onchange &&
+									onchange({
+										value: ev.value,
+										key: editor.key,
+										input: ev.input,
+									});
+							}}
+							{...editor}
+							label={undefined}
+							error={errors && errors[editor.key]}
+							value={data[editor.key]}
+						/>
 					</Field>
 					{#if errors && errors[editor.key] && editor.validationMessage}
 						<div class="wx-message">{editor.validationMessage}</div>

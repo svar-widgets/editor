@@ -46,12 +46,12 @@ export declare const Editor: Component<{
 		changes: Record<string, any>;
 		values: Record<string, any>;
 	}) => void;
-	onaction: (ev: {
+	onaction?: (ev: {
 		item: IToolbarItem;
 		values: Record<string, any>;
 		changes: Record<string, any>;
 	}) => void;
-	onvalidation: (ev: {
+	onvalidation?: (ev: {
 		errors: {
 			[key: string]: {
 				errorType: "validation" | "required";
@@ -59,6 +59,9 @@ export declare const Editor: Component<{
 		};
 		values: Record<string, any>;
 	}) => void;
+	hotkeys?:
+		| false
+		| { [key: string]: ((e?: KeyboardEvent) => void) | boolean };
 	children?: () => any;
 }>;
 

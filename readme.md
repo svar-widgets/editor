@@ -29,7 +29,7 @@ An intuitive Svelte component for creating content editing forms to manage data 
 -   **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
 -   **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
 -   **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
--   **TypeScript support**: fully typed for safe and seamless integration
+-   **TypeScript support**: fully typed for safe and seamless integration.
 
 ### :hammer_and_wrench: How to Use
 

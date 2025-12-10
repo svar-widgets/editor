@@ -66,7 +66,7 @@ export const links = [
 		"SaveValidatedValues",
 	],
 	["/locales/:skin", "Locales", Locales, "Locales"],
-	["/overlay/:skin", "Overlay", Overlay],
+	["/overlay/:skin", "Overlay", Overlay, "Overlay"],
 	// ["/gantt/:skin", "Gantt", Gantt, "Gantt"],
 	// ["/kanban/:skin", "Kanban", Kanban, "Kanban"],
 	// ["/scheduler/:skin", "Scheduler", Scheduler, "Scheduler"],

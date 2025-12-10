@@ -30,6 +30,7 @@
 -   **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
 -   **Comments section**: You can add a nice-looking comments section to give your users the ability to communicate.
 -   **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
+-   **TypeScript support**: fully typed for safe and seamless integration.
 
 ### :hammer_and_wrench: How to Use
 

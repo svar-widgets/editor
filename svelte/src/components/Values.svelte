@@ -28,6 +28,7 @@
 		onsave,
 		onaction,
 		onvalidation,
+		hotkeys,
 	} = $props();
 
 	// mark hidden items
@@ -88,15 +89,16 @@
 	let actualValues = $state({});
 	let data = $state({});
 
+	let d = dataLink(() => values && null);
+
 	$effect.pre(() => {
 		values;
 		untrack(() => {
 			actualValues = deepCopy(values);
 			data = deepCopy(values);
+			if (d.errors) d.errors = runValidation([]);
 		});
 	});
-
-	let d = dataLink(() => values && null);
 
 	let notSaved = $state([]);
 	// reset notSaved when values are changed
@@ -210,6 +212,7 @@
 	{data}
 	{editors}
 	{focus}
+	{hotkeys}
 	errors={d.errors}
 	onclick={handleAction}
 	onkeydown={handleAction}
