@@ -10,10 +10,10 @@
 	registerEditorItem("comments", Comments);
 
 	const commentsURL = new RestURL(
-		"https://comments-backend.svar.dev/comments"
+		"https://master--svar-comments-go--dev.webix.io/comments"
 	);
 	const tasksURL = new RestURL(
-		"https://tasklist-backend.svar.dev/tasks"
+		"https://master--svar-tasklist-go--dev.webix.io/tasks"
 	);
 
 	const { listData, users } = $state(getData());

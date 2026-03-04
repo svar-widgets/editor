@@ -1,3 +1,7 @@
+## 2.4.1
+
+-   Using Svelte Core v2.4.1
+
 ## 2.4.0
 
 ### New features
