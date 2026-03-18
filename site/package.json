@@ -1,6 +1,6 @@
 {
 	"name": "@svar-ui/site-svelte-editor",
-	"version": "2.4.1",
+	"version": "2.5.0",
 	"type": "module",
 	"scripts": {
 		"build": "vite build",
@@ -9,7 +9,7 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"@svar-ui/svelte-editor": "2.4.1",
-		"@svar-ui/svelte-core": "2.4.1"
+		"@svar-ui/svelte-editor": "2.5.0",
+		"@svar-ui/svelte-core": "2.5.0"
 	}
 }

@@ -1,3 +1,7 @@
+## 2.5.0
+
+-   Using Svelte Core v2.5.0
+
 ## 2.4.1
 
 -   Using Svelte Core v2.4.1
