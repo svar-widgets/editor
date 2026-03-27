@@ -1,3 +1,9 @@
+## 2.5.1
+
+### Fixes
+
+-   Incorrect height of Editor wth sidebar placement
+
 ## 2.5.0
 
 -   Using Svelte Core v2.5.0
