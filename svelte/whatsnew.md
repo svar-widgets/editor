@@ -1,3 +1,9 @@
+## 2.5.2
+
+### Fixes
+
+-   Impossible to registerTabs as Editor item to use for switching batches
+
 ## 2.5.1
 
 ### Fixes

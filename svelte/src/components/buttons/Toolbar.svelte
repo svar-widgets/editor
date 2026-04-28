@@ -7,6 +7,7 @@
 		top = true,
 		onclick,
 		onchange: onchangeform,
+		css = "",
 	} = $props();
 	const onchange = ({ item, value }) => {
 		onchangeform && onchangeform({ key: item.key, value });
@@ -14,7 +15,11 @@
 </script>
 
 {#if items.length}
-	<div class="wx-editor-toolbar" class:wx-topbar={top} class:wx-bottom={!top}>
+	<div
+		class="wx-editor-toolbar {css}"
+		class:wx-topbar={top}
+		class:wx-bottom={!top}
+	>
 		<Toolbar
 			{items}
 			values={$state.snapshot(values)}

@@ -36,12 +36,19 @@
 	</div>
 	<div>
 		<h3>Tabbar</h3>
-		<div class="bg">
-			<Editor topBar={false} items={batchItems} {values} {activeBatch}>
-				<div class="top">
-					<Tabs {options} bind:value={activeBatch}></Tabs>
-				</div>
-			</Editor>
+		<div class="bg" style="height: 400px;">
+			<div class="bg">
+				<Editor
+					topBar={false}
+					items={batchItems}
+					{values}
+					{activeBatch}
+				>
+					<div class="top">
+						<Tabs {options} bind:value={activeBatch}></Tabs>
+					</div>
+				</Editor>
+			</div>
 		</div>
 	</div>
 	<div>

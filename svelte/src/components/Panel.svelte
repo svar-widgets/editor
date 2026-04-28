@@ -112,7 +112,7 @@
 </script>
 
 <div class={css} bind:this={node} tabindex="-1" style={"outline: none;"}>
-	<Toolbar {...topBar} items={tbar} values={data} {onclick} {onchange} />
+	<Toolbar {...topBar} items={tbar} values={data} {onclick} />
 	<div class="wx-content" class:wx-layout-columns={layout === "columns"}>
 		{#if children}{@render children()}{/if}
 		<Columns
@@ -130,7 +130,6 @@
 			values={data}
 			top={false}
 			{onclick}
-			{onchange}
 		/>
 	</div>
 </div>

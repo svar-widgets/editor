@@ -759,10 +759,10 @@
     "@svar-ui/svelte-core" "2.5.1"
     "@svar-ui/tasklist-locales" "2.5.1"
 
-"@svar-ui/svelte-toolbar@2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@svar-ui/svelte-toolbar/-/svelte-toolbar-2.5.1.tgz#a3dceff7d853464db6c4a2b727dcea56a0886b38"
-  integrity sha512-QAomfCKtX4tqFLLid/H/U5STqVwrFi5FKPGssDHO55rYlyk+q/v6TfkO3qJYQlFEveui7IgaoWHY9lGxIn8tXg==
+"@svar-ui/svelte-toolbar@2.5.2":
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/@svar-ui/svelte-toolbar/-/svelte-toolbar-2.5.2.tgz#a438d2b529ef3efccd61cda474d41bbc2886d537"
+  integrity sha512-T7kHXBF0Yfm54mUJYEh75kCZB1XhgUzdBae9y2tsbTB0k/fNH41/qAS6SqMzt3NQ4fg86FmO8eVm2PAzxMC8CA==
   dependencies:
     "@svar-ui/lib-dom" "0.12.1"
     "@svar-ui/svelte-core" "2.5.1"
