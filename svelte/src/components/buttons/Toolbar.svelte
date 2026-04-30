@@ -8,6 +8,7 @@
 		onclick,
 		onchange: onchangeform,
 		css = "",
+		layout = "row",
 	} = $props();
 	const onchange = ({ item, value }) => {
 		onchangeform && onchangeform({ key: item.key, value });
@@ -25,6 +26,7 @@
 			values={$state.snapshot(values)}
 			{onclick}
 			{onchange}
+			{layout}
 		/>
 	</div>
 {/if}

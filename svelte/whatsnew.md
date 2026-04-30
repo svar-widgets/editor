@@ -1,8 +1,14 @@
+## 2.5.3
+
+### Fixes
+
+-   Support for multi-row toolbar
+
 ## 2.5.2
 
 ### Fixes
 
--   Impossible to registerTabs as Editor item to use for switching batches
+-   Impossible to register Tabs/Segmented as Editor item to use for switching batches
 
 ## 2.5.1
 
