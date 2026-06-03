@@ -1,3 +1,9 @@
+## 2.6.0
+
+### Fixes
+
+-   Sidebar Editor closes when clicking popups of inner controls
+
 ## 2.5.3
 
 ### Fixes
