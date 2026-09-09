@@ -1,0 +1,5 @@
+command -v git-lfs >/dev/null 2>&1 || {
+	echo "git-lfs is not installed" >&2
+	exit 2
+}
+git lfs post-merge "$@"

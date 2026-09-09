@@ -1,0 +1,54 @@
+{
+	"name": "@svar-ui/svelte-editor-demos",
+	"version": "2.7.0",
+	"private": true,
+	"homepage": "https://svar.dev/svelte/editor/",
+	"bugs": {
+		"url": "https://forum.svar.dev"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/svar-widgets/editor.git"
+	},
+	"files": [
+		"dist",
+		"readme.md",
+		"license.txt"
+	],
+	"type": "module",
+	"types": "./dist/index.d.ts",
+	"svelte": "./dist/index.js",
+	"exports": {
+		".": {
+			"svelte": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"build": "vp build",
+		"lint": "vp lint ./demos ./src",
+		"start": "vp dev --open",
+		"dev": "svelte-package -i ./src --watch"
+	},
+	"dependencies": {
+		"@svar-ui/core-locales": "catalog:",
+		"@svar-ui/editor-locales": "workspace:*",
+		"@svar-ui/lib-data-provider": "catalog:",
+		"@svar-ui/svelte-comments": "catalog:",
+		"@svar-ui/svelte-core": "catalog:",
+		"@svar-ui/svelte-editor": "workspace:*",
+		"@svar-ui/svelte-tasklist": "catalog:",
+		"@svar-ui/svelte-toolbar": "catalog:",
+		"svelte-spa-router": "catalog:"
+	},
+	"devDependencies": {
+		"@svar-ui/svelte-comments": "catalog:",
+		"@svar-ui/svelte-tasklist": "catalog:",
+		"@sveltejs/vite-plugin-svelte": "catalog:",
+		"svelte": "catalog:",
+		"svelte-check": "catalog:"
+	}
+}

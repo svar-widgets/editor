@@ -1,0 +1,43 @@
+packages:
+  - apps/*
+  - packages/*
+  - tools/*
+
+catalog:
+  "@playwright/test": 1.60.0
+  "@sveltejs/package": ^2.5.7
+  "@sveltejs/vite-plugin-svelte": ^7.1.2
+  "@types/node": ^24
+  "@typescript/native-preview": "7.0.0-dev.20260316.1"
+  "@svar-ui/core-locales": "2.6.1"
+  "@svar-ui/lib-data-provider": "1.7.3"
+  "@svar-ui/lib-dom": "0.14.0"
+  "@svar-ui/lib-state": "1.9.7"
+  "@svar-ui/svelte-comments": "2.6.1"
+  "@svar-ui/svelte-core": "2.6.1"
+  "@svar-ui/svelte-menu": "2.6.1"
+  "@svar-ui/svelte-tasklist": "2.6.1"
+  "@svar-ui/svelte-toolbar": "2.6.1"
+  glob: ^13.0.6
+  playwright: 1.60.0
+  rollup-plugin-visualizer: ^7.0.1
+  sharp: ^0.34.5
+  svelte: ^5.54.0
+  svelte-check: ^4.4.6
+  svelte-spa-router: ^5.0.0
+  "typescript": "^5.9.3"
+  vite: npm:@voidzero-dev/vite-plus-core@0.1.16
+  vite-plus: 0.1.16
+  vitest: npm:@voidzero-dev/vite-plus-test@0.1.16
+
+catalogMode: prefer
+overrides:
+  vite: "catalog:"
+  vitest: "catalog:"
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: "*"
+    vitest: "*"
