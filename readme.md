@@ -17,19 +17,19 @@
 An intuitive Svelte component for creating content editing forms to manage data within UI elements on a page. You can use it for editing structured data like table rows, informational cards, blocks with text, etc.
 
 <div align="center">
-	
+
 <img src="https://svar.dev/images/github/github-editor.png" alt="SVAR Editor - Svelte UI Component" style="width: 600px;">
 
 </div>
 
 ### :sparkles: Key features:
 
--   **Flexible display options**: add the editor as a modal popup, inline form or as a seamless sidebar for convenient access.
--   **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Core](https://github.com/svar-widgets/core) library.
--   **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
--   **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
--   **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
--   **TypeScript support**: fully typed for safe and seamless integration.
+- **Flexible display options**: add the editor as a modal popup, inline form or as a seamless sidebar for convenient access.
+- **Multiple input types**: Use various input fields like text inputs, checkboxes, date pickers, sliders, and more controls from [SVAR Core](https://github.com/svar-widgets/core) library.
+- **Built-in validation**: Includes basic validation for required fields and supports custom validation rules for advanced scenarios.
+- **Flexible save options**: Choose between manual saves, auto-save, or custom saving logic adjusted to your needs.
+- **Compact layout**: Organize forms into expandable sections or a 2-column layout for efficient use of screen space.
+- **TypeScript support**: fully typed for safe and seamless integration.
 
 ### :hammer_and_wrench: How to Use
 

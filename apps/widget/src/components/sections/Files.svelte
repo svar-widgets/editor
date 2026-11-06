@@ -10,7 +10,9 @@
 	interface Props {
 		value?: TFilesValue;
 		// resolves the display list when value is a master record id
-		ondata?: (value: TFilesValue) => Promise<IUploadedFile[]> | IUploadedFile[];
+		ondata?: (
+			value: TFilesValue
+		) => Promise<IUploadedFile[]> | IUploadedFile[];
 		onchange?: TFilesChangeHandler;
 		[key: string]: any;
 	}
@@ -26,5 +28,9 @@
 {#await finalData}
 	<FilesList data={[]} {...props} onchange={handleOnchange} />
 {:then data}
-	<FilesList data={(data as IUploadedFile[]) ?? []} {...props} onchange={handleOnchange} />
+	<FilesList
+		data={(data as IUploadedFile[]) ?? []}
+		{...props}
+		onchange={handleOnchange}
+	/>
 {/await}

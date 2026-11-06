@@ -1,6 +1,6 @@
 {
 	"name": "@svar-ui/svelte-editor-demos",
-	"version": "2.7.0",
+	"version": "2.7.1",
 	"private": true,
 	"homepage": "https://svar.dev/svelte/editor/",
 	"bugs": {
@@ -29,9 +29,7 @@
 	"scripts": {
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"build": "vp build",
-		"lint": "vp lint ./demos ./src",
-		"start": "vp dev --open",
-		"dev": "svelte-package -i ./src --watch"
+		"start": "vp dev --open"
 	},
 	"dependencies": {
 		"@svar-ui/core-locales": "catalog:",

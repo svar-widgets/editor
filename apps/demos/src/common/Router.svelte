@@ -10,8 +10,8 @@
 		name;
 	const baseLink = $derived(
 		"https://github.com/svar-widgets/" +
-		productTag +
-		"/blob/main/apps/demos/src/cases/"
+			productTag +
+			"/blob/main/apps/demos/src/cases/"
 	);
 
 	$effect(() => {
@@ -32,7 +32,7 @@
 		const tPage = `/${page}/:skin`;
 		const matched = links.find(a => a[0] === tPage);
 		title = matched?.[1] ?? "";
-		const props = matched?.[3] ?? { };
+		const props = matched?.[3] ?? {};
 		name = props.file ?? matched?.[1];
 		link = `${baseLink}${name.replace(/\s+/g, "")}.svelte`;
 

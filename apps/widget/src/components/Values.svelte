@@ -141,8 +141,7 @@
 					if (ed.keys?.length) data[ed.key] = ed.getter(data);
 				});
 			}
-			if (d.errors)
-				d.errors = runValidation([]);
+			if (d.errors) d.errors = runValidation([]);
 		});
 	});
 

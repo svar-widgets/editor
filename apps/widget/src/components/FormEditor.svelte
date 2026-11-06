@@ -60,25 +60,33 @@
 	const _ = getContext<IWxI18n>("wx-i18n").getGroup("editor");
 
 	let overlay = $derived(
-		readonly && editors.config.every(
-			editor => !(editor.keys || [editor.key]).some(k => (k as string) in data)
-		)
+		readonly &&
+			editors.config.every(
+				editor =>
+					!(editor.keys || [editor.key]).some(
+						k => (k as string) in data
+					)
+			)
 	);
 
-	let isSingle = $derived(editors.config.length === 1 && editors.config[0].fill);
-	let onchangeHandler = (key: TID) => (ev: {
-								value: any;
-								input?: boolean;
-							}) => {
-								onchange?.({
-										value: ev.value,
-										key: key,
-										input: ev.input,
-									});
-							}
+	let isSingle = $derived(
+		editors.config.length === 1 && editors.config[0].fill
+	);
+	let onchangeHandler =
+		(key: TID) => (ev: { value: any; input?: boolean }) => {
+			onchange?.({
+				value: ev.value,
+				key: key,
+				input: ev.input,
+			});
+		};
 </script>
 
-<div class="wx-sections {css}" class:wx-sections-single={isSingle} bind:this={root}>
+<div
+	class="wx-sections {css}"
+	class:wx-sections-single={isSingle}
+	bind:this={root}
+>
 	{#if children}{@render children()}{/if}
 	{#if overlay}
 		<div class="wx-overlay">{_("No data")}</div>
@@ -91,7 +99,7 @@
 					onchange={onchangeHandler(editor.key)}
 					label={editor.label}
 					value={data[editor.key]}
-					readonly={readonly}
+					{readonly}
 					error={errors && errors[editor.key]}
 					{...editor}
 					{onclick}
@@ -104,11 +112,13 @@
 							: (editor.label ?? "")}
 						required={editor.required}
 					>
-						{@const Component2 = getItemHandler(editor.comp, { readonly })}
+						{@const Component2 = getItemHandler(editor.comp, {
+							readonly,
+						})}
 						<Component2
 							onchange={onchangeHandler(editor.key)}
 							{...editor}
-							readonly={readonly}
+							{readonly}
 							label={undefined}
 							error={errors && errors[editor.key]}
 							value={data[editor.key]}

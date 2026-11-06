@@ -35,12 +35,7 @@
 	<div class="bg-top">
 		<h3>Tabbar</h3>
 		<div class="bg" style="height: 400px;">
-			<Editor
-				topBar={false}
-				items={batchItems}
-				{values}
-				{activeBatch}
-			>
+			<Editor topBar={false} items={batchItems} {values} {activeBatch}>
 				<div class="top">
 					<Tabs {options} bind:value={activeBatch}></Tabs>
 				</div>

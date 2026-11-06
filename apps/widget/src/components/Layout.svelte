@@ -1,11 +1,7 @@
 <script lang="ts">
 	import { ModalArea, SideArea } from "@svar-ui/svelte-core";
 	import Panel from "./Panel.svelte";
-	import type {
-		IEditorsConfig,
-		TValues,
-		TActionHandler,
-	} from "../types.js";
+	import type { IEditorsConfig, TValues, TActionHandler } from "../types.js";
 
 	// Layout is a thin placement wrapper, forwarding everything to Panel.
 	interface Props {
@@ -25,18 +21,38 @@
 
 {#if placement === "modal"}
 	<ModalArea>
-		<Panel css={`wx-editor wx-panel ${css}`} {onclick} {placement} {...restProps} />
+		<Panel
+			css={`wx-editor wx-panel ${css}`}
+			{onclick}
+			{placement}
+			{...restProps}
+		/>
 	</ModalArea>
 {:else if placement === "fullscreen"}
 	<div class="wx-editor-fullscreen">
-		<Panel css={`wx-editor wx-inline-form ${css}`} {onclick} {placement} {...restProps} />
+		<Panel
+			css={`wx-editor wx-inline-form ${css}`}
+			{onclick}
+			{placement}
+			{...restProps}
+		/>
 	</div>
 {:else if placement === "sidebar"}
 	<SideArea oncancel={handleClose}>
-		<Panel css={`wx-editor wx-panel ${css}`} {onclick} {placement} {...restProps} />
+		<Panel
+			css={`wx-editor wx-panel ${css}`}
+			{onclick}
+			{placement}
+			{...restProps}
+		/>
 	</SideArea>
 {:else}
-	<Panel css={`wx-editor wx-inline-form ${css}`} {onclick} {placement} {...restProps} />
+	<Panel
+		css={`wx-editor wx-inline-form ${css}`}
+		{onclick}
+		{placement}
+		{...restProps}
+	/>
 {/if}
 
 <style>

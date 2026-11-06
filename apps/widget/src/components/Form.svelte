@@ -4,7 +4,16 @@
 
 	import Editor from "./FormEditor.svelte";
 	import Values from "./Values.svelte";
-	import type { IItemConfig, TValues, Snippet } from "../types.js";
+	import type {
+		IItemConfig,
+		TValues,
+		THotkeys,
+		TChangeHandler,
+		TSaveHandler,
+		TActionResultHandler,
+		TValidationHandler,
+		Snippet,
+	} from "../types.js";
 
 	interface Props {
 		values?: TValues;
@@ -15,6 +24,11 @@
 		autoSave?: boolean;
 		readonly?: boolean;
 		children?: Snippet;
+		hotkeys?: THotkeys;
+		onchange?: TChangeHandler;
+		onsave?: TSaveHandler;
+		onaction?: TActionResultHandler;
+		onvalidation?: TValidationHandler;
 		[key: string]: any;
 	}
 

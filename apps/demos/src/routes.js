@@ -19,7 +19,9 @@ import TinyMCE from "./cases/TinyMCE.svelte";
 export const links = [
 	{
 		group: "",
-		items: [["/base/:skin", "Basic Editor", BasicInit, { file: "BasicInit" }]],
+		items: [
+			["/base/:skin", "Basic Editor", BasicInit, { file: "BasicInit" }],
+		],
 	},
 	{
 		group: "Layout",
@@ -27,9 +29,19 @@ export const links = [
 			["/modal/:skin", "As Modal", Modal, { file: "Modal" }],
 			["/sidebar/:skin", "As Sidebar", Sidebar, { file: "Sidebar" }],
 			["/inline/:skin", "Inline", Inline, { file: "Inline" }],
-			["/fullscreen/:skin", "Fullscreen", Fullscreen, { file: "Fullscreen" }],
+			[
+				"/fullscreen/:skin",
+				"Fullscreen",
+				Fullscreen,
+				{ file: "Fullscreen" },
+			],
 			["/tabs/:skin", "With Tabs", Tabs, { file: "Tabs" }],
-			["/sections/:skin", "With Sections", Sections, { file: "Sections" }],
+			[
+				"/sections/:skin",
+				"With Sections",
+				Sections,
+				{ file: "Sections" },
+			],
 		],
 	},
 	{
@@ -52,13 +64,23 @@ export const links = [
 				{ file: "MultiField" },
 			],
 			["/tinymce/:skin", "Rich Text", TinyMCE, { file: "TinyMCE" }],
-			["/code-mirror/:skin", "Code Mirror", CodeMirror, { file: "CodeMirror" }],
+			[
+				"/code-mirror/:skin",
+				"Code Mirror",
+				CodeMirror,
+				{ file: "CodeMirror" },
+			],
 		],
 	},
 	{
 		group: "Features",
 		items: [
-			["/validation/:skin", "Validation", Validation, { file: "Validation" }],
+			[
+				"/validation/:skin",
+				"Validation",
+				Validation,
+				{ file: "Validation" },
+			],
 			["/locales/:skin", "Locales", Locales, { file: "Locales" }],
 		],
 	},

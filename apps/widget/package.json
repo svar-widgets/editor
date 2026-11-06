@@ -1,6 +1,6 @@
 {
 	"name": "@svar-ui/svelte-editor",
-	"version": "2.7.0",
+	"version": "2.7.1",
 	"description": "SVAR UI ExportPopup board widget",
 	"homepage": "https://svar.dev/svelte/editor/",
 	"bugs": {
@@ -30,8 +30,6 @@
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"test": "vp test run",
 		"build": "svelte-package -i ./src",
-		"lint": "vp lint ./demos ./src",
-		"start": "vp dev --open",
 		"dev": "svelte-package -i ./src --watch"
 	},
 	"dependencies": {
@@ -40,15 +38,15 @@
 		"@svar-ui/lib-dom": "catalog:",
 		"@svar-ui/lib-state": "catalog:",
 		"@svar-ui/svelte-core": "catalog:",
-		"@svar-ui/svelte-toolbar": "catalog:",
-		"svelte-check": "catalog:"
+		"@svar-ui/svelte-toolbar": "catalog:"
 	},
 	"devDependencies": {
 		"@sveltejs/package": "catalog:",
 		"@sveltejs/vite-plugin-svelte": "catalog:",
-		"svelte": "catalog:"
+		"svelte": "catalog:",
+		"svelte-check": "catalog:"
 	},
 	"peerDependencies": {
-		"svelte": "catalog:"
+		"svelte": "^5.0.0"
 	}
 }

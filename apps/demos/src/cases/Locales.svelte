@@ -96,7 +96,7 @@
 		return items.map(item => {
 			return {
 				...item,
-				label: vcb[lang][item.label]||item.label,
+				label: vcb[lang][item.label] || item.label,
 			};
 		});
 	};
@@ -120,7 +120,7 @@
 		{ id: "ru", label: "RU" },
 	];
 	let lang = $state("de");
-	
+
 	const getWords = (lang: any) => {
 		if (lang == "en") return { ...enCore, ...en };
 		if (lang == "cn") return { ...cnCore, ...cn };
@@ -137,7 +137,7 @@
 		// trigger validation
 		setTimeout(() => {
 			const input = document.querySelector(
-				".wx-editor .wx-text input",
+				".wx-editor .wx-text input"
 			) as HTMLInputElement;
 
 			input.value = "";
@@ -145,7 +145,7 @@
 				new InputEvent("input", {
 					inputType: "deleteContentBackward",
 					bubbles: true,
-				}),
+				})
 			);
 		}, 500);
 	};
@@ -153,13 +153,17 @@
 </script>
 
 <div class="toolbar">
-<Segmented options={langs} bind:value={lang} onchange={resetName} />
+	<Segmented options={langs} bind:value={lang} onchange={resetName} />
 </div>
 <div style="margin: auto; max-width: 700px; margin-top: 40px;">
 	{#key lang}
 		<Locale words={getWords(lang)}>
-			<Editor {values} autoSave={true} placement="sidebar" items={translateItems(items)} />
-
+			<Editor
+				{values}
+				autoSave={true}
+				placement="sidebar"
+				items={translateItems(items)}
+			/>
 		</Locale>
 	{/key}
 </div>

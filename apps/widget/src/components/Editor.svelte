@@ -4,7 +4,17 @@
 
 	import Layout from "./Layout.svelte";
 	import Values from "./Values.svelte";
-	import type { IItemConfig, TValues, TBar, Snippet } from "../types.js";
+	import type {
+		IItemConfig,
+		TValues,
+		TBar,
+		THotkeys,
+		TChangeHandler,
+		TSaveHandler,
+		TActionResultHandler,
+		TValidationHandler,
+		Snippet,
+	} from "../types.js";
 
 	interface Props {
 		values?: TValues;
@@ -19,6 +29,11 @@
 		readonly?: boolean;
 		placement?: string;
 		children?: Snippet;
+		hotkeys?: THotkeys;
+		onchange?: TChangeHandler;
+		onsave?: TSaveHandler;
+		onaction?: TActionResultHandler;
+		onvalidation?: TValidationHandler;
 		[key: string]: any;
 	}
 

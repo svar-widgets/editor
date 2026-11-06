@@ -1,3 +1,13 @@
+## 2.7.1
+
+- Using Svelte Core v2.6.2
+
+### Fixes
+
+- Event and hotkey props of Editor and Form are missing in the type definitions
+- The `format` prop of the ReadOnly section is missing in the type definitions
+- Editor locales have no type definitions
+
 ## 2.7.0
 
 - TinyMCE and CodeMirror sections
@@ -76,12 +86,12 @@
 ### Updates
 
 - Events in `autoSave` modes are enhanced:
-  - true: `onsave` event is triggered for each field change
-  - false: `onsave` event is triggered on "Save" button click if data was changed
+    - true: `onsave` event is triggered for each field change
+    - false: `onsave` event is triggered on "Save" button click if data was changed
 - Validation is enhanced:
-  - it is triggered for each changed field if `autoSave` is switched on
-  - it is triggered for the whole form if `autoSave` is switched off
-  - `onsave` event is triggered only if all data is valid
+    - it is triggered for each changed field if `autoSave` is switched on
+    - it is triggered for the whole form if `autoSave` is switched off
+    - `onsave` event is triggered only if all data is valid
 - Ability to mutate Editor values within the `onchange` event handler
 
 ### Breaking changes

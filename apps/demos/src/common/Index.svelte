@@ -232,7 +232,8 @@
 	.layout {
 		--demo-framework-color: #fc6519;
 		--wx-border: 1px solid var(--demo-chrome-border);
-		--demo-chrome-segmented-selected-shadow: 0 0 7px 0 rgba(66, 69, 76, 0.07);
+		--demo-chrome-segmented-selected-shadow: 0 0 7px 0
+			rgba(66, 69, 76, 0.07);
 		box-sizing: border-box;
 		display: flex;
 		height: 100%;
@@ -585,7 +586,9 @@
 
 	/* Dark skin fills the segmented track per figma; light leaves the bg
 	   to Willow's default so the original look is preserved. */
-	:global(.wx-willow-dark-theme) .segmented-box :global(div.segmented-themes) {
+	:global(.wx-willow-dark-theme)
+		.segmented-box
+		:global(div.segmented-themes) {
 		background-color: var(--demo-chrome-segmented-bg);
 	}
 </style>

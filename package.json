@@ -1,16 +1,17 @@
 {
 	"name": "@svar-ui/editor",
-	"version": "2.7.0",
+	"version": "2.7.1",
 	"private": true,
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
 		"build": "vp run editor-locales#build && vp run svelte-editor#build",
-		"ready": "vp fmt && vp lint && vp run test -r && vp run build -r",
+		"ready": "vp fmt && vp lint && vp run -r test && vp run -r build",
 		"start": "vp run svelte-editor-demos#start",
 		"prepare": "vp config"
 	},
 	"devDependencies": {
+		"typescript": "catalog:",
 		"vite-plus": "catalog:"
 	},
 	"engines": {

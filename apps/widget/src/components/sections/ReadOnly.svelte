@@ -6,12 +6,16 @@
 
 	const ctx = getContext<IWxI18n>("wx-i18n");
 	const _ = ctx.getGroup("editor");
-	const { calendar, formats } = ctx.getRaw() as { calendar: any; formats: any };
+	const { calendar, formats } = ctx.getRaw() as {
+		calendar: any;
+		formats: any;
+	};
 
 	interface Props {
 		value?: any;
 		options?: { id: TID; label: string }[];
 		label?: string;
+		format?: string;
 	}
 	let { value, options, label, format }: Props = $props();
 

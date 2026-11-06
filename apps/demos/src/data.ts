@@ -49,8 +49,7 @@ export function getData() {
 
 	const values = {
 		name: "John Doe",
-		descr:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
+		descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
 		admin: true,
 		email: "john.doe@example.org",
 		theme: false,

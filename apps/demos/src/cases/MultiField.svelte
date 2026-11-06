@@ -33,7 +33,13 @@
 </script>
 
 <div style="padding: 10px; max-width: 700px;">
-	<Editor {items} {values} topBar={false} autoSave={true} onsave={handleSave} />
+	<Editor
+		{items}
+		{values}
+		topBar={false}
+		autoSave={true}
+		onsave={handleSave}
+	/>
 	{#if message}
 		<div class="status">{message}</div>
 	{/if}

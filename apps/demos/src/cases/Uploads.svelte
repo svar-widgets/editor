@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { Editor, registerEditorItem, Attachments } from "@svar-ui/svelte-editor";
+	import {
+		Editor,
+		registerEditorItem,
+		Attachments,
+	} from "@svar-ui/svelte-editor";
 	registerEditorItem("files", Attachments);
 	registerEditorItem("files", Attachments, { readonly: true });
 
@@ -47,13 +51,7 @@
 	shows the error state. Add/delete signals appear above.
 </p>
 
-<Editor
-	placement="sidebar"
-	autoSave={true}
-	{items}
-	{values}
-	onsave={refresh}
-/>
+<Editor placement="sidebar" autoSave={true} {items} {values} onsave={refresh} />
 
 <style>
 	.message {

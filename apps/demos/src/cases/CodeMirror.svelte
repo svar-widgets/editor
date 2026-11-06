@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { Editor, registerEditorItem, CodeMirror } from "@svar-ui/svelte-editor";
+	import {
+		Editor,
+		registerEditorItem,
+		CodeMirror,
+	} from "@svar-ui/svelte-editor";
 	registerEditorItem("code-mirror", CodeMirror);
 	registerEditorItem("code-mirror", CodeMirror, { readonly: true });
 
@@ -128,7 +132,6 @@ A minimal task manager used as the reference demo for the code editor.
 	}
 
 	const refresh = ({ values: v }: any) => {
-		
 		values = { ...values, ...v };
 		// keep the edited content so switching files preserves changes
 		const record = records.find(r => r.id === selectedId);
@@ -137,10 +140,12 @@ A minimal task manager used as the reference demo for the code editor.
 	const prevent = (e: MouseEvent) => {
 		e.stopPropagation();
 		e.preventDefault();
-	}
+	};
 </script>
 
-<div class="message">{#if selected}{selected.name} - {values.content.length} chars{/if}</div>
+<div class="message">
+	{#if selected}{selected.name} - {values.content.length} chars{/if}
+</div>
 
 <!-- svelte-ignore a11y_no_static_element_interactions, a11y_click_events_have_key_events -->
 <div class="files" onclick={prevent}>
@@ -161,11 +166,10 @@ A minimal task manager used as the reference demo for the code editor.
 		autoSave={false}
 		{items}
 		{values}
-		onaction={() => selectedId = 0 }
+		onaction={() => (selectedId = 0)}
 		onsave={refresh}
 	/>
 {/if}
-
 
 <style>
 	.message {

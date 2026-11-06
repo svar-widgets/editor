@@ -5,17 +5,24 @@ export default defineConfig({
 	staged: {
 		"*": "vp check --fix",
 	},
-	lint: { options: { typeAware: true, typeCheck: true } },
+	lint: {
+		options: { typeAware: true, typeCheck: true },
+		rules: {
+			"no-floating-promises": "off",
+		},
+	},
 	fmt: {
 		useTabs: true,
+		tabWidth: 4,
 		semi: true,
 		singleQuote: false,
 		quoteProps: "as-needed",
 		trailingComma: "es5",
 		bracketSpacing: true,
 		arrowParens: "avoid",
-		svelteSortOrder: "options-scripts-markup-styles",
 		printWidth: 80,
+		svelte: true,
+		overrides: [{ files: ["*.yml", "*.yaml"], options: { tabWidth: 2 } }],
 	},
 	test: {
 		exclude: ["**/node_modules", "apps/tests/**"],

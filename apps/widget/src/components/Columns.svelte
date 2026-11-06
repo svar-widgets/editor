@@ -18,8 +18,16 @@
 		onclick?: TActionHandler;
 		onchange?: TChangeHandler;
 	}
-	let { editors, data, layout, errors, focus, readonly, onclick, onchange }: Props =
-		$props();
+	let {
+		editors,
+		data,
+		layout,
+		errors,
+		focus,
+		readonly,
+		onclick,
+		onchange,
+	}: Props = $props();
 
 	let columns = $derived.by<any[]>(() => {
 		let cols: any[] = [];
@@ -51,7 +59,14 @@
 {#if layout === "columns"}
 	<div class="wx-cols">
 		<div class="wx-left">
-			<Editor editors={columns[0]} {readonly} {data} {errors} {onclick} {onchange} />
+			<Editor
+				editors={columns[0]}
+				{readonly}
+				{data}
+				{errors}
+				{onclick}
+				{onchange}
+			/>
 		</div>
 		<div class="wx-right">
 			<Editor

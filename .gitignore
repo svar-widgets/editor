@@ -33,3 +33,4 @@ tl.db*
 
 # dev arterfacts
 /site
+.vitest/

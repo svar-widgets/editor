@@ -8,7 +8,7 @@
 		// trigger validation
 		setTimeout(() => {
 			const input = document.querySelector(
-				".wx-editor .wx-text input",
+				".wx-editor .wx-text input"
 			) as HTMLInputElement;
 
 			input.value = "";
@@ -16,7 +16,7 @@
 				new InputEvent("input", {
 					inputType: "deleteContentBackward",
 					bubbles: true,
-				}),
+				})
 			);
 			input.focus();
 		}, 500);
@@ -27,4 +27,3 @@
 <div style="padding: 10px;">
 	<Editor {items} {values} topBar={false} />
 </div>
-

@@ -28,7 +28,7 @@
 			<Editor {items} {values} onaction={handleClick} />
 		</div>
 	</div>
-	
+
 	<div>
 		<h3>Top Bar, Mixed</h3>
 		<div class="bg">

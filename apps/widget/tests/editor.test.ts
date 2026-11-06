@@ -157,14 +157,18 @@ describe("itemsToEditors, multi-key items", () => {
 			},
 		]);
 
-		expect(editors.validateValues({ start: 2, end: 1 }, undefined, _)).toEqual({
+		expect(
+			editors.validateValues({ start: 2, end: 1 }, undefined, _)
+		).toEqual({
 			dates: { errorType: "validation" },
 		});
 		expect(
 			editors.validateValues({ start: 1, end: 2 }, undefined, _)
 		).toBeNull();
 		// sub-key change lists resolve to the owning editor
-		expect(editors.validateValues({ start: 2, end: 1 }, ["end"], _)).toEqual({
+		expect(
+			editors.validateValues({ start: 2, end: 1 }, ["end"], _)
+		).toEqual({
 			dates: { errorType: "validation" },
 		});
 	});
@@ -179,7 +183,9 @@ describe("itemsToEditors, multi-key items", () => {
 			},
 		]);
 
-		expect(editors.validateValues({ start: 1, end: 2 }, undefined, _)).toEqual({
+		expect(
+			editors.validateValues({ start: 1, end: 2 }, undefined, _)
+		).toEqual({
 			dates: { errorType: "required" },
 		});
 		// falsy sub-values fail, same as single-field required

@@ -160,7 +160,8 @@ export function itemsToEditors(sections: IItemConfig[]): IEditorsConfig {
 				errors[ed.key] = {
 					errorType: "validation",
 				};
-				ed.validationMessage = ed.validationMessage ?? _("Invalid value");
+				ed.validationMessage =
+					ed.validationMessage ?? _("Invalid value");
 				any++;
 			}
 		});

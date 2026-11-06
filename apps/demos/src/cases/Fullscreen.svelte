@@ -35,7 +35,6 @@
 	];
 	const values = listData[0];
 
-
 	let message = $state("");
 	let visible = $state(true);
 

@@ -63,10 +63,12 @@
 	const prevent = (e: MouseEvent) => {
 		e.stopPropagation();
 		e.preventDefault();
-	}
+	};
 </script>
 
-<div class="message">{#if selected}{selected.name} - {values.content.length} chars{/if}</div>
+<div class="message">
+	{#if selected}{selected.name} - {values.content.length} chars{/if}
+</div>
 
 <!-- svelte-ignore a11y_no_static_element_interactions, a11y_click_events_have_key_events -->
 <div class="files" onclick={prevent}>
@@ -87,11 +89,10 @@
 		autoSave={false}
 		{items}
 		{values}
-		onaction={() => selectedId = 0 }
+		onaction={() => (selectedId = 0)}
 		onsave={refresh}
 	/>
 {/if}
-
 
 <style>
 	.message {
